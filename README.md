@@ -1,10 +1,8 @@
-# la_demo
+![logo](logo.png)
+
 Webapp para el projecto de demostración para _El Parking_.
 ___
 Webapp for job application at _El Parking_.
-
-![logo](logo.png)
-
 ## El stack:
 [React](https://reactjs.org/) + [Redux](https://redux.js.org/) + [Apollo](https://www.apollographql.com/)
 
