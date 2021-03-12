@@ -1,16 +1,11 @@
 # la_demo
-Projecto de demostración para El Parking
+Webapp para el projecto de demostración para _El Parking_.
+___
+Webapp for job application at _El Parking_.
 
 ![logo](logo.png)
 
 ## El stack:
-### Backend
-[PHP7](https://www.php.net/) + [Laravel](https://laravel.com/) + [LightHouse](https://lighthouse-php.com/)
-
-Un servidor escrito en [PHP7](https://www.php.net/) que expone la API con [GraphQL](https://graphql.org/)
-usando [LightHouse](https://lighthouse-php.com/).
-
-### Frontend
 [React](https://reactjs.org/) + [Redux](https://redux.js.org/) + [Apollo](https://www.apollographql.com/)
 
 La funcionalidad de la web se implementa con [React](https://reactjs.org/) embebido en 
@@ -21,8 +16,6 @@ Los estados intermedios para la gestión de la entrada del usuario se gestionan 
 mientras que la información proveniente de la API se guarda de forma centralizada en un almacén de [Redux](https://redux.js.org/).
 Esto se hace así para evitar hacer sobre-ingeniería para aspectos básicos y mantener el código sencillo.
 
-## Testing
-
 ## Ejecutando el proyecto
 **Requisitos**
 
@@ -31,17 +24,13 @@ Esto se hace así para evitar hacer sobre-ingeniería para aspectos básicos y m
 |  PHP | x   |
 | Node   | x |
 
-### De forma local
-### Desplegando en Heroku
+### Servidor local para desarrollo
+### Traspilación del proyecto
+### Ejecución de los tests
+
+## Despliegues en Netlify
 ___
 ## The stack:
-### Backend
-[PHP7](https://www.php.net/) + [Laravel](https://laravel.com/) + [LightHouse](https://lighthouse-php.com/)
-
-Serverside code written in [PHP7](https://www.php.net/) with an API exposed through [GraphQL](https://graphql.org/)
-using [LightHouse](https://lighthouse-php.com/) implementation.
-
-### Frontend
 [React](https://reactjs.org/) + [Redux](https://redux.js.org/) + [Apollo](https://www.apollographql.com/)
 
 Client-side functionality is implemented as an embbeded [React](https://reactjs.org/) app in
@@ -52,8 +41,6 @@ While intermediate state (for user input management) is being held at component 
 app data comming from the API is held in a centralized [Redux](https://redux.js.org/) store.
 This strategy aims at lowering the amount of code involved and simplifying state management.
 
-## Testing
-
 ## Executing the project
 **Requirements**
 
@@ -62,5 +49,7 @@ This strategy aims at lowering the amount of code involved and simplifying state
 |  PHP | x   |
 | Node   | x |
 
-### Localy
-### Deploying on Heroku
+### Local development server
+### Transpiling the source code
+### Running tests
+## Deployments on Netlify
