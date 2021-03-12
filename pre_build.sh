@@ -1,3 +1,4 @@
+mkdir -p dist
 echo "Clearing previous build ..."
 rm -fr dist/*
 echo "Copying static files ..."
