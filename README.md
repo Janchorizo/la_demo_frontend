@@ -1,5 +1,7 @@
 ![logo](logo.png)
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bd844105-ed37-4be9-beab-0d106aaafeae/deploy-status)](https://app.netlify.com/sites/lademo/deploys)
+
 Webapp para el projecto de demostración para _El Parking_.
 ___
 Webapp for job application at _El Parking_.
