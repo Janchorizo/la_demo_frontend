@@ -54,7 +54,7 @@ export default function GithubBanner({url, fill='var(--main)', color='#fff'}) {
 }
 
 GithubBanner.propTypes = {
-  url: PropTypes.str,
-  fill: PropTypes.str,
-  color: PropTypes.str,
+  url: PropTypes.string,
+  fill: PropTypes.string,
+  color: PropTypes.string,
 };

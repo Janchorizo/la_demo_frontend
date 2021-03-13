@@ -11,8 +11,19 @@ html{
     --text-darker: var(--darker);
     --text-nav: #9b9b9b;
     --text-hover: var(--highlight);
+
+    --text-family: geomanist;
+
+    --double-text: 2em;
+    --small: 10px;
+    --medium: 50px;
+    --large: 90px;
 }
 
+* {
+  text-rendering: optimizeLegibility;
+  font-family: var(--text-family);
+}
 .main-bg{background-color: var(--main);}
 .main-c{color: var(--main);}
 .main-bd{border-color: var(--main);}
