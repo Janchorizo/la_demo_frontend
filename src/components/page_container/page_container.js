@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 // internal
 import style from './style.module.css';
 
