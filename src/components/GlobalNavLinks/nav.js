@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {useIntl} from 'react-intl';
 
-//import style from './style.module.css';
+// import style from './style.module.css';
 import {
   AppRoute,
   AppRouteTitle,

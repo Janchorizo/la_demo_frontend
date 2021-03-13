@@ -5,7 +5,7 @@ import {
 } from 'components';
 import style from './style.module.css';
 
-export default function TopBar(){
+export default function TopBar() {
   return (
     <React.Fragment>
       <div className={style.top}>
