@@ -1,0 +1,62 @@
+.topbar{
+}
+.top{
+  position: sticky;
+  top: -1px;
+  display: block;
+  height: var(--medium);
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 1;
+  background-color: white;
+}
+.bottom{
+  z-index: 1;
+  position: sticky;
+  top: -1px;
+  display: block;
+  height: var(--medium);
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 2;
+}
+.navBorder{
+  position: sticky;
+  top: -1px;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row: 2;
+  border-bottom: solid 1px var(--grey);
+  border-top: solid 1px var(--grey);
+}
+.logo{
+  display: block;
+  margin: var(--small) 0;
+}
+.logo div{
+  top: 0;
+  z-index: 1;
+  background-position: left;
+  height: 32px;
+  width: 142px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.logoSized{
+  display: inline-block;
+  height: 32px;
+  width: 142px;
+}
+.mainNav{
+  display: inline-flex;
+  list-style: none;
+  margin: var(--small) 0;
+}
+.mainNav > li{
+  margin-right: 1em;
+}
+.mainNav a{
+  font-size: 16px;
+  color: var(--text-nav);
+  font-weight: 500;
+}
