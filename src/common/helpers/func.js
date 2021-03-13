@@ -1,4 +1,4 @@
-/**
+/** range
  * Returns an iterable ranging from start to end (end not
  * included). If the provided arguments are not valid, an
  * empty array is returned.
