@@ -1,5 +1,5 @@
 import 'core-js';
-import "regenerator-runtime/runtime";
+import 'regenerator-runtime/runtime';
 import {range} from '../func';
 
 describe('range', () => {
@@ -7,7 +7,7 @@ describe('range', () => {
     expect([...range(3)]).toStrictEqual([0, 1, 2]);
   });
   test('range with start and end provided', () => {
-    expect([...range(2,5)]).toStrictEqual([2, 3, 4]);
+    expect([...range(2, 5)]).toStrictEqual([2, 3, 4]);
   });
   test('range spanning negative interval', () => {
     expect([...range(-3, 3)]).toStrictEqual([-3, -2, -1, 0, 1, 2]);

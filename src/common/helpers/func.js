@@ -23,7 +23,7 @@ export function* range(...args) {
     return [];
   }
 
-  const cond = start <= end ? d=>d<end : d=>d>end;
+  const cond = start <= end ? (d)=>d<end : (d)=>d>end;
   for (let d=start; cond(d) === true; d+=step) {
     yield d;
   }
