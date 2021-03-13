@@ -1,0 +1,17 @@
+.langSwitch{
+list-style: none;
+font-size: 1.3em;
+}
+.langSwitch li:nth-child(2):before{
+content: '/';
+margin: 0 1em 0 .4em;
+color: var(--text);
+}
+.langSwitch a{
+color: var(--accent1);
+text-decoration: none;
+}
+a.active{
+cursor: default;
+color: var(--text);
+}
