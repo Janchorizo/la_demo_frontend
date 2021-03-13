@@ -5,7 +5,7 @@ import style from './style.module.css';
 
 export default function Home() {
   return (
-    <React.Fragment>
+    <div className={style.page}>
       <section id='' className={`${style.section} content-layout`}>
         <div>
           <h3>Some section title</h3>
@@ -41,6 +41,6 @@ export default function Home() {
         <div className='light-bg'>
         </div>
       </section>
-    </React.Fragment>
+    </div>
   );
 }

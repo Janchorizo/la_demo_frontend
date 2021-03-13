@@ -26,7 +26,7 @@ import 'common/style/theme.css';
 
 export default function App() {
   return (
-    <div className='flex five center'>
+    <div className='content-layout'>
       <GithubBanner url='https://github.com/Janchorizo/la_demo_frontend'/>
       <LocalizedRouter
         RouterComponent={BrowserRouter}

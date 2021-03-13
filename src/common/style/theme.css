@@ -5,6 +5,7 @@ html{
     --light: #f2f4f5;
     --white: #fff;
     --highlight: #a1f3d0;
+    --grey: #9B9B9B;
 
     --text: #555759;
     --text-dark: var(--dark);

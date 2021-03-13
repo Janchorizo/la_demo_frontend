@@ -1,4 +1,5 @@
 .github-corner{
+  z-index: 30;
   position: fixed;
   top: 0;
   right: 0;

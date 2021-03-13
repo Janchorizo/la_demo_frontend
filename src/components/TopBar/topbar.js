@@ -3,34 +3,24 @@ import {
   GlobalNavLinks,
   LanguageSelector,
 } from 'components';
-//import style from './style.module.css';
+import style from './style.module.css';
 
 export default function TopBar(){
-  const logoStyle = {
-    margin: 'var(--double-text) var(--small)',
-    top: 0,
-    zIndex: 211,
-    backgroundPosition: 'center',
-    height: '32px',
-    width: '142px',
-    backgroundSize: 'contain',
-    backgroundRepeat: 'no-repeat',
-    backgroundImage: 'url(/logo.png)',
-  };
-
   return (
-    <div>
-      <div className='half light-bg'>
-        <a href='#'>
-          <div style={logoStyle}/>
+    <React.Fragment>
+      <div className={style.top}>
+        <a className={style.logo} href='#'>
+          <div style={{backgroundImage: 'url(/logo.png)'}}/>
         </a>
       </div>
-      <div>
-        <ul>
+      <div className={style.bottom}>
+        <div className={style.logoSized}/>
+        <ul className={style.mainNav}>
           <GlobalNavLinks />
         </ul>
-        <LanguageSelector />
-        </div>
-    </div>
+      </div>
+      <div className={style.navBorder}>
+      </div>
+    </React.Fragment>
   );
 }
