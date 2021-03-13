@@ -1,4 +1,4 @@
-![logo](logo.png)
+![logo](static/logo.png)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bd844105-ed37-4be9-beab-0d106aaafeae/deploy-status)](https://app.netlify.com/sites/lademo/deploys)
 
