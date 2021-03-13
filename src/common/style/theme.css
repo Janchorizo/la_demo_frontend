@@ -13,6 +13,11 @@ html{
     --text-hover: var(--highlight);
 
     --text-family: geomanist;
+
+    --double-text: 2em;
+    --small: 10px;
+    --medium: 50px;
+    --large: 90px;
 }
 
 * {

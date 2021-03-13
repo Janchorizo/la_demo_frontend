@@ -6,16 +6,15 @@ import 'common/style/theme.css';
 
 export default function App() {
   const logoStyle = {
-    margin: '.5em',
+    margin: 'var(--double-text) var(--small)',
     top: 0,
     zIndex: 211,
     backgroundPosition: 'center',
     height: '32px',
     width: '142px',
-    backgroundSize: 'cover',
+    backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
     backgroundImage: 'url(/logo.png)',
-    backgroundColor: '#fff',
   };
 
   return (
