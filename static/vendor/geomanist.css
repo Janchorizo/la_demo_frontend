@@ -12,8 +12,14 @@
 }
 @font-face{
   font-family: "geomanist";
-  src: url("/vendor/fonts/geomanist-medium-webfont.woff");
+  src: url("/vendor/fonts/geomanist-book-webfont.woff");
   font-weight: 500;
+  font-style: normal;
+}
+@font-face{
+  font-family: "geomanist";
+  src: url("/vendor/fonts/geomanist-medium-webfont.woff");
+  font-weight: 600;
   font-style: normal;
 }
 @font-face{
