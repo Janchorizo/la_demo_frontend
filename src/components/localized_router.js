@@ -52,6 +52,6 @@ LocalizedRouter.propTypes = {
     PropTypes.arrayOf(PropTypes.node),
     PropTypes.node,
   ]),
-  RouterComponent: PropTypes.node,
+  RouterComponent: PropTypes.any,
   defaultLanguage: PropTypes.string,
 };
