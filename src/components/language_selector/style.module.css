@@ -1,0 +1,36 @@
+.langSwitch{
+  position:relative;
+  list-style: none;
+}
+.langSwitch a{
+text-decoration: none;
+}
+a.active{
+cursor: default;
+color: var(--text);
+}
+.langSwitch select{
+  background: #F8F8F8;
+  color: #555759;
+  font-family: 'geomanist';
+  padding: 10px 35px;
+  height: 44px;
+  border: 1px solid #DEDEDE;
+  font-size: 14px;
+  font-weight: 500;
+  -webkit-appearance: none;
+  outline: none;
+}
+.boxIcon{
+  pointer-events: none;
+  position: absolute;
+  font-size: 16px;
+  top: calc(50% - .7em);
+}
+.boxIcon:first-of-type{
+  left: var(--small);
+}
+.boxIcon:last-of-type{
+  right: var(--small);
+  top: calc(50% - .4em);
+}
