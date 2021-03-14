@@ -1,36 +1,51 @@
 .topbar{
+  position: sticky;
+  top: calc(0px - var(--medium));
+  grid-column-start: 2;
+  grid-column-end: 4;
+  grid-row: 1;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: 170px 1fr;
+  -ms-grid-columns: 170px 1fr;
 }
 .top{
   position: sticky;
   top: -1px;
   display: block;
   height: var(--medium);
-  grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-start: 1;
+  grid-column-end: 2;
   grid-row: 1;
-  background-color: white;
+  z-index: 10;
 }
 .bottom{
-  z-index: 1;
   position: sticky;
   top: -1px;
-  display: block;
+  display: flex;
+  justify-content: flex-start;
   height: var(--medium);
   grid-column-start: 2;
-  grid-column-end: 4;
+  grid-column-end: 3;
   grid-row: 2;
+  z-index: 5;
 }
 .navBorder{
   position: sticky;
   top: -1px;
   grid-column-start: 1;
   grid-column-end: 5;
-  grid-row: 2;
+  grid-row: 1;
   border-bottom: solid 1px var(--grey);
   border-top: solid 1px var(--grey);
+  background-color: white;
+  height: var(--medium);
+  z-index: -5;
+  padding-top: var(--medium);
+  margin-top: var(--medium);
 }
 .logo{
-  display: block;
+  display: inline-block;
   margin: var(--small) 0;
 }
 .logo div{
@@ -42,15 +57,12 @@
   background-size: contain;
   background-repeat: no-repeat;
 }
-.logoSized{
-  display: inline-block;
-  height: 32px;
-  width: 142px;
-}
 .mainNav{
   display: inline-flex;
   list-style: none;
-  margin: var(--small) 0;
+  margin: 0;
+  padding: 0;
+  height: inherit;
 }
 .mainNav > li{
   margin-right: 1em;

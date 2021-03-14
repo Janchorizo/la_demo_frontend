@@ -1,0 +1,13 @@
+.linkLi{
+  height: 100%;
+  display: block;
+}
+.linkLi a{
+  padding-top: calc(1.5 * var(--small));
+  height: 100%;
+  display: block;
+}
+a.active{
+  color: var(--main);
+  border-bottom: solid 4px var(--main);
+}

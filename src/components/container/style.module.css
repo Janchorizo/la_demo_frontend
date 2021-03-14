@@ -5,7 +5,6 @@
   max-width: 100%;
   grid-template-columns: 15px 1fr 1fr 15px;
   -ms-grid-columns: 15px 1fr 1fr 15px;
-  background: #fff;
 }
 @media only screen and (min-width: 768px){
   .container {

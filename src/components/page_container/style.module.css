@@ -3,4 +3,5 @@
   grid-column-end: 3;
   grid-row: 3;
   min-height: calc(100vh - 2*var(--large));
+  z-index: -10;
 }

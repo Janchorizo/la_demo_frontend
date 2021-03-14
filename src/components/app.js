@@ -6,6 +6,7 @@ import {
 } from 'react-router-dom';
 // internal
 import {
+  Container,
   LocalizedRouter,
   LocalizedSwitch,
   TopBar,
@@ -33,7 +34,7 @@ import 'common/style/theme.css';
  */
 export default function App() {
   return (
-    <div className='content-layout'>
+    <Container>
       <GithubBanner url='https://github.com/Janchorizo/la_demo_frontend'/>
       <LocalizedRouter
         RouterComponent={BrowserRouter}
@@ -58,6 +59,6 @@ export default function App() {
         </LocalizedSwitch>
         <Footer />
       </LocalizedRouter>
-    </div>
+    </Container>
   );
 };

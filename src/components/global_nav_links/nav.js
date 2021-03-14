@@ -1,11 +1,13 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {useIntl} from 'react-intl';
-
+// internal
 import {
   AppRoute,
   AppRouteTitle,
 } from 'common/intl';
+import style from './style.module.css';
+
 
 /**
  * Locale-aware global navigation
@@ -27,8 +29,9 @@ export default function GlobalNavLinks() {
   const links = routes
       .filter(([key, routeName]) => key !== 'Home')
       .map(([key, routeName]) => (
-        <li key={key}>
+        <li key={key} className={style.linkLi}>
           <NavLink
+            activeClassName={style.active}
             exact
             to={localizeRouteKey(routeName)}
           >

@@ -38,32 +38,3 @@ html{
 .text-dark-c{color: var(--text-dark);}
 .text-nav-c{color: var(--text-nav);}
 .text-light-c{color: var(--white);}
-
-.content-layout {
-    display: grid;
-    display: -ms-grid;
-    width: 100vw;
-    max-width: 100%;
-    grid-template-columns: 15px 1fr 1fr 15px;
-    -ms-grid-columns: 15px 1fr 1fr 15px;
-    background: #fff;
-}
-@media only screen and (min-width: 768px){
-.content-layout {
-    grid-template-columns: 50px 1fr 1fr 50px;
-    -ms-grid-columns: 50px 1fr 1fr 50px;
-}
-}
-
-@media only screen and (min-width: 980px){
-.content-layout {
-    grid-template-columns: 1fr 480px 480px 1fr;
-    -ms-grid-columns: 1fr 512px 512px 1fr;
-}
-}
-@media only screen and (min-width: 1025px){
-.content-layout {
-  grid-template-columns: 1fr 512px 512px 1fr;
-  -ms-grid-columns: 1fr 512px 512px 1fr;
-}
-}
