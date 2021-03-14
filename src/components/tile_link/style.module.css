@@ -1,0 +1,31 @@
+.tile{
+  display: block;
+  width: calc(100% / 3 - 2 * var(--small));
+  height: 330px;
+  background-color: var(--main);
+  background-position: left;
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: white;
+  padding: var(--small) calc(2 * var(--small));
+  position: relative;
+}
+.tile h3{
+  padding: 0;
+  margin-top: var(--small);
+}
+.tile p{
+  margin-top: .5em;
+  line-height: 1em;
+}
+.arrow{
+  position: absolute;
+  top: 0;
+  right: calc(var(--small) + 5px);
+  font-weight: bold;
+  font-size: 36px;
+}
+.tile:hover{
+  color: var(--highlight);
+  box-shadow: 0px 0px 16px 0px rgba(2,54,60,0.6);
+}
