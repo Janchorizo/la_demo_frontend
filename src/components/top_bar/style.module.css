@@ -12,12 +12,13 @@
 .top{
   position: sticky;
   top: -1px;
-  display: block;
+  display: flex;
   height: var(--medium);
   grid-column-start: 1;
   grid-column-end: 2;
   grid-row: 1;
   z-index: 10;
+  align-items: center;
 }
 .bottom{
   position: sticky;
@@ -44,15 +45,11 @@
   padding-top: var(--medium);
   margin-top: var(--medium);
 }
-.logo{
-  display: inline-block;
-  margin: var(--small) 0;
-}
 .logo div{
   top: 0;
   z-index: 1;
   background-position: left;
-  height: 32px;
+  height: 28px;
   width: 142px;
   background-size: contain;
   background-repeat: no-repeat;
