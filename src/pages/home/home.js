@@ -57,6 +57,25 @@ export default function Home() {
           title={formatMessage({id: 'home.tile3_title'})}
           body={formatMessage({id: 'home.tile3_body'})}/>
       </div>
+      <Container id={style['buymeacoffee']} className={style.section}>
+        <div>
+          <h1>También tengo proyectos personales</h1>
+          <h2>
+            En mi tiempo libre hago projectos para estar ágil.
+            <br/>
+            Relacionados con visualización de datos normalmente, siempre
+            aplico una nueva técnica, lenguaje o framework.
+          </h2>
+          <a className='button'
+            href='https://www.buymeacoffee.com/janchorizo'
+            target='blank'>
+            Saber más
+          </a>
+        </div>
+        <div id={style['buymeacoffee-img']}
+          style={{backgroundImage: 'url(/assets/chart_sample.png)'}}>
+        </div>
+      </Container>
       <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
