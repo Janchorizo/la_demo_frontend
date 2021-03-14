@@ -4,4 +4,5 @@
   grid-row: 3;
   min-height: calc(100vh - 2*var(--large));
   z-index: 0;
+  overflow-x: hidden;
 }
