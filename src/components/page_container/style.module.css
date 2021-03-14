@@ -1,7 +1,7 @@
 .pageContainer{
   grid-column-start: 2;
-  grid-column-end: 3;
+  grid-column-end: 4;
   grid-row: 3;
   min-height: calc(100vh - 2*var(--large));
-  z-index: -10;
+  z-index: 0;
 }
