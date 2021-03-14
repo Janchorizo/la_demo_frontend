@@ -26,11 +26,18 @@ export default {
 
   /** Page content */
   'home.title': 'La Demo',
+  'home.tile1_title': 'Acerca de mí',
+  'home.tile1_body':
+    'Mi perfil como profesional con dos años de axperiencia en investigación.',
+  'home.tile2_title': 'Parkings',
+  'home.tile2_body': 'Una demo interactiva con parkings y llamadas a una API.',
+  'home.tile3_title': 'La oferta Laboral',
+  'home.tile3_body': 'Un repaso a la oferta a la que aplico.',
 
   'myself.title': 'Acerca de mí',
 
   'parkings.title': 'Parkings',
 
-  'offer.title': 'La Oferta',
+  'offer.title': 'La Oferta Laboral',
 
 };

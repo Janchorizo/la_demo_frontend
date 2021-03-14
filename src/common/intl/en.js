@@ -26,11 +26,18 @@ export default {
 
   /** Page content */
   'home.title': 'La Demo',
+  'home.tile1_title': 'About me',
+  'home.tile1_body': 'My profile as a 2-year experienced junior researcher.',
+  'home.tile2_title': 'Parkings',
+  'home.tile2_body': 'An interactive demo with parkings and API calls.',
+  'home.tile3_title': 'The Job Offer',
+  'home.tile3_body':
+    'An overview of the job opportunity and how I could fulfill it.',
 
   'myself.title': 'Myself',
 
   'parkings.title': 'Parkings',
 
-  'offer.title': 'The Offer',
+  'offer.title': 'The Job Offer',
 
 };
