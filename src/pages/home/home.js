@@ -31,6 +31,15 @@ export default function Home() {
 
   return (
     <PageContainer>
+      <Container id={style['hero']} className={style.section}>
+        <div>
+          <h1>Avanzamos juntos</h1>
+          <h2>Versatilidad y constancia en frontend o backend.</h2>
+        </div>
+        <div id={style['hero-img']}
+          style={{backgroundImage: 'url(/assets/me_thinking.jpg)'}}>
+        </div>
+      </Container>
       <div id={style['page-buttons']}>
         <TileLink
           path={localizeRouteKey(AppRoute.Myself)}
@@ -48,13 +57,6 @@ export default function Home() {
           title={formatMessage({id: 'home.tile3_title'})}
           body={formatMessage({id: 'home.tile3_body'})}/>
       </div>
-      <Container className={style.section}>
-        <div>
-          <h3>Some section title</h3>
-        </div>
-        <div className='light-bg'>
-        </div>
-      </Container>
       <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
