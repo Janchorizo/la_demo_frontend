@@ -4,6 +4,7 @@
  * empty array is returned.
  * If only one positional argument is passed, it is interpreted as
  * the end of the range, else [start, end, step] are set.
+ * @return {Iterable}
  */
 export function* range(...args) {
   if (![1, 2, 3].includes(args.length)) {
