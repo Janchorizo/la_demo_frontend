@@ -7,3 +7,4 @@ export {default as GlobalNavLinks} from './global_nav_links';
 export {default as Container} from './container';
 export {default as PageContainer} from './page_container';
 export {default as Footer} from './footer';
+export {default as TileLink} from './tile_link';

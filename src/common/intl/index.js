@@ -6,7 +6,6 @@ export const AppLanguage = {
 export const AppRoute = {
   Home: 'routes.home',
   Myself: 'routes.myself',
-  Knowledge: 'routes.knowledge',
   Parkings: 'routes.parkings',
   TheOffer: 'routes.offer',
 };
@@ -14,7 +13,6 @@ export const AppRoute = {
 export const AppRouteTitle = {
   [AppRoute.Home]: 'home.title',
   [AppRoute.Myself]: 'myself.title',
-  [AppRoute.Knowledge]: 'knowledge.title',
   [AppRoute.Parkings]: 'parkings.title',
   [AppRoute.TheOffer]: 'offer.title',
 };

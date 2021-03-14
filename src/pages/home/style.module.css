@@ -5,7 +5,7 @@
 }
 .section > div{
   display: block;
-  height: calc(3 * var(--large));
+  min-height: calc(3 * var(--large));
   grid-column-start: 3;
   grid-column-end: 4;
   grid-row: 1;
@@ -14,4 +14,196 @@
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row: 1;
+}
+#page-buttons{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding-top: var(--large);
+  background: var(--light);
+}
+#page-buttons::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100vw;
+  background: var(--light);
+  display: block;
+}
+#hero-img,
+#buymeacoffee-img{
+  background-size: cover;
+}
+#hero{
+  height: calc(4 * var(--large));
+}
+#hero > div,
+#buymeacoffee > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#hero h1{
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 500;
+  color: var(--dark);
+  padding-top: 0;
+}
+#hero h2{
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 400;
+  color: var(--dark);
+  padding: 0 0 0 16px;
+  border-left: solid 4px var(--highlight);
+}
+#buymeacoffee{
+  height: calc(4 * var(--large));
+  margin: var(--large) 0;
+  background-color: #f9f6ff;
+}
+#buymeacoffee h1{
+  color: var(--text);
+  font-size: 32px;
+  line-height: 40px;
+  font-weight: 400;
+  padding: 0 0 0 calc(2 * var(--small));
+  margin-bottom: 16px;
+}
+#buymeacoffee h2{
+  color: var(--text);
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: 100;
+  padding: 0 2em 0 calc(2 * var(--small));
+}
+#buymeacoffee a{
+  margin-top: calc(2 * var(--small));
+  margin-left: calc(2 * var(--small));
+}
+#versatility-section::before,
+#versatility-section::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  background-color: var(--light);
+}
+#versatility-section::before{
+  right:100%;
+}
+#versatility-section::after{
+  left: 100%;
+}
+#versatility-section{
+  position: relative;
+  color: var(--text);
+  background-color: var(--light);
+  grid-gap: 16px;
+  display: grid;
+  display: -ms-grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 50px 0 180px;
+}
+#versatility-section-title{
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 1;
+}
+#versatility-section-title h1{
+  font-size: 48px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+}
+#versatility-section-title h2{
+  margin: 0;
+  padding: 0 0 48px 0;
+  font-size: 48px;
+  font-weight: 500;
+}
+#versatility-section .column h3{
+  margin-bottom: 13px;
+  font-size: 26px;
+  font-weight: 500;
+  padding: 0;
+}
+#versatility-section .column p{
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  line-height: 25px;
+  font-weight: 400;
+}
+#versatility-section .col:nth-of-type(1){
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 2;
+}
+#versatility-section .col:nth-of-type(2){
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 2;
+}
+#versatility-section .col:nth-of-type(3){
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row: 2;
+}
+#examples-card::after{
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 56px;
+  background-color: var(--highlight);
+}
+#examples-card{
+  position: relative;
+  grid-column-start: 1;
+  grid-column-end: 4;
+  grid-row: 3;
+  padding: 1em 1em 1em 56px;
+  transform: translateY(-50%);
+  background-color: white;
+  box-shadow: 2px 2px 8px 0px rgba(85,87,89,0.1);
+  display: grid;
+  grid-template-columns: 4fr 6fr;
+}
+#examples-carrousel{
+  display: block;
+  min-height: 200px;
+  margin: 70px 0 40px;
+  padding-right: 20px;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+#examples-card h1{
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row: 1;
+  padding: 24px 0 8px 20px;
+  color: #555759;
+  font-size: 20px;
+  font-weight: 400;
+}
+@media only screen and (min-width: 768px){
+  #examples-card h1{
+    padding: 17px 0 21px 40px;
+    font-size: 28px;
+  }
+}
+@media only screen and (min-width: 1025px){
+  #examples-card h1{
+    padding: 70px 0 40px 40px;
+  }
 }

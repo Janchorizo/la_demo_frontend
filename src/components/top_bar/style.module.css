@@ -8,6 +8,7 @@
   display: -ms-grid;
   grid-template-columns: 170px 1fr;
   -ms-grid-columns: 170px 1fr;
+  z-index: 10;
 }
 .top{
   position: sticky;
@@ -29,7 +30,7 @@
   grid-column-start: 2;
   grid-column-end: 3;
   grid-row: 2;
-  z-index: 5;
+  z-index: 10;
 }
 .navBorder{
   position: sticky;
@@ -41,7 +42,7 @@
   border-top: solid 1px var(--grey);
   background-color: white;
   height: var(--medium);
-  z-index: -5;
+  z-index: 5;
   padding-top: var(--medium);
   margin-top: var(--medium);
 }
