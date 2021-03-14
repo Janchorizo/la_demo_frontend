@@ -31,32 +31,10 @@ export default function Home() {
 
   return (
     <PageContainer>
-      <div id={style['versatility-section']}>
-        <div id={style['versatility-section-title']}>
-          <h1>¿Tienes requisitos y arquitecturas cambiantes?</h1>
-          <h2>Deja que ayude</h2>
-        </div>
-        <div className={style.column}>
-          <h3>Sólo indícame qué quieres</h3>
-          <p>dweijfgh eerfiub e3biu dkjcne3bui wkd</p>
-        </div>
-        <div className={style.column}>
-          <h3>Una relación para rato</h3>
-          <p></p>
-        </div>
-        <div className={style.column}>
-          <h3>Sin miedo a fallar</h3>
-          <p></p>
-        </div>
-      </div>
-      <div id={style['examples-card']}>
-        <h1>Ya he probado muchas combinaciones</h1>
-        <div id={style['example-carrousel']}></div>
-      </div>
       <Container id={style['hero']} className={style.section}>
         <div>
-          <h1>Avanzamos juntos</h1>
-          <h2>Versatilidad y constancia en frontend o backend.</h2>
+          <h1>{formatMessage({id: 'home.hero_title'})}</h1>
+          <h2>{formatMessage({id: 'home.hero_subtitle'})}</h2>
         </div>
         <div id={style['hero-img']}
           style={{backgroundImage: 'url(/assets/me_thinking.jpg)'}}>
@@ -81,30 +59,46 @@ export default function Home() {
       </div>
       <Container id={style['buymeacoffee']} className={style.section}>
         <div>
-          <h1>También tengo proyectos personales</h1>
+          <h1>{formatMessage({id: 'home.buymeacoffee_title'})}</h1>
           <h2>
-            En mi tiempo libre hago projectos para estar ágil.
+            {formatMessage({id: 'home.buymeacoffee_text1'})}
             <br/>
-            Relacionados con visualización de datos normalmente, siempre
-            aplico una nueva técnica, lenguaje o framework.
+            {formatMessage({id: 'home.buymeacoffee_text2'})}
           </h2>
           <a className='button'
             href='https://www.buymeacoffee.com/janchorizo'
             target='blank'>
-            Saber más
+            {formatMessage({id: 'home.buymeacoffee_link'})}
           </a>
         </div>
         <div id={style['buymeacoffee-img']}
           style={{backgroundImage: 'url(/assets/chart_sample.png)'}}>
         </div>
       </Container>
-      <Container className={style.section}>
-        <div>
-          <h3>Some section title</h3>
+      <div id={style['versatility-section']}>
+        <div id={style['versatility-section-title']}>
+          <h1>{formatMessage({id: 'home.versatility_section_title'})}</h1>
+          <h2>{formatMessage({id: 'home.versatility_section_subtitle'})}</h2>
         </div>
-        <div className='light-bg'>
+        <div className={style.column}>
+          <h3>{formatMessage({id: 'home.versatility_section_col1_title'})}</h3>
+          <p>{formatMessage({id: 'home.versatility_section_col1_text'})}</p>
         </div>
-      </Container>
+        <div className={style.column}>
+          <h3>{formatMessage({id: 'home.versatility_section_col2_title'})}</h3>
+          <p>{formatMessage({id: 'home.versatility_section_col2_text'})}</p>
+        </div>
+        <div className={style.column}>
+          <h3>{formatMessage({id: 'home.versatility_section_col3_title'})}</h3>
+          <p>{formatMessage({id: 'home.versatility_section_col3_text'})}</p>
+        </div>
+      </div>
+      <div id={style['examples-card']}>
+        <h1>
+          {formatMessage({id: 'home.versatility_section_carrousel_title'})}
+        </h1>
+        <div id={style['example-carrousel']}></div>
+      </div>
       <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
