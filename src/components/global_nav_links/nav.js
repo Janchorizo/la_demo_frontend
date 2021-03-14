@@ -2,20 +2,25 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import {useIntl} from 'react-intl';
 
-// import style from './style.module.css';
 import {
   AppRoute,
   AppRouteTitle,
 } from 'common/intl';
 
 /**
- * Nav
  * Locale-aware global navigation
+ * @component
+ * @return {React.Component}
  */
 export default function GlobalNavLinks() {
   const {formatMessage, locale} = useIntl();
-  function localizeRouteKey(path) {
-    return `/${locale}` + formatMessage({id: path});
+  /**
+   * Create a localized full path for a route key
+   * @param {string} pathKey
+   * @return {string}
+   */
+  function localizeRouteKey(pathKey) {
+    return `/${locale}` + formatMessage({id: pathKey});
   }
 
   const routes = Object.entries(AppRoute);
