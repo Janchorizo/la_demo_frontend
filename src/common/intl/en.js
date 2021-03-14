@@ -6,6 +6,10 @@ export default {
   'routes.parkings': '/parkings',
   'routes.offer': '/the_offer',
 
+  /* Topbar content */
+  'topbar.origin_link': 'Use El Parking services at their website',
+  'topbar.login': 'Login',
+
   /** Footer content */
   'footer.title1': 'Using the tecnologies from',
   'footer.title2': 'The Web',
