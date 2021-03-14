@@ -3,19 +3,27 @@ import {useIntl} from 'react-intl';
 // internal
 import {
   GlobalNavLinks,
-  LanguageSelector,
 } from 'components';
 import {
-  appStrings,
-  AppLanguage,
   AppRoute,
 } from 'common/intl';
 import style from './style.module.css';
 
+
+/**
+ * Topbar component with global navigation and login component.
+ * @component
+ * @return {React.Component}
+ */
 export default function TopBar() {
   const {formatMessage, locale} = useIntl();
-  function localizeRouteKey(path) {
-    return `/${locale}` + formatMessage({id: path});
+  /**
+   * Create a localized full path for a route key
+   * @param {string} pathKey
+   * @return {string}
+   */
+  function localizeRouteKey(pathKey) {
+    return `/${locale}` + formatMessage({id: pathKey});
   }
   const homePath = localizeRouteKey(AppRoute.Home);
 
