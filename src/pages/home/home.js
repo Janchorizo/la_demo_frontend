@@ -31,6 +31,28 @@ export default function Home() {
 
   return (
     <PageContainer>
+      <div id={style['versatility-section']}>
+        <div id={style['versatility-section-title']}>
+          <h1>¿Tienes requisitos y arquitecturas cambiantes?</h1>
+          <h2>Deja que ayude</h2>
+        </div>
+        <div className={style.column}>
+          <h3>Sólo indícame qué quieres</h3>
+          <p>dweijfgh eerfiub e3biu dkjcne3bui wkd</p>
+        </div>
+        <div className={style.column}>
+          <h3>Una relación para rato</h3>
+          <p></p>
+        </div>
+        <div className={style.column}>
+          <h3>Sin miedo a fallar</h3>
+          <p></p>
+        </div>
+      </div>
+      <div id={style['examples-card']}>
+        <h1>Ya he probado muchas combinaciones</h1>
+        <div id={style['example-carrousel']}></div>
+      </div>
       <Container id={style['hero']} className={style.section}>
         <div>
           <h1>Avanzamos juntos</h1>
@@ -74,13 +96,6 @@ export default function Home() {
         </div>
         <div id={style['buymeacoffee-img']}
           style={{backgroundImage: 'url(/assets/chart_sample.png)'}}>
-        </div>
-      </Container>
-      <Container className={style.section}>
-        <div>
-          <h3>Some section title</h3>
-        </div>
-        <div className='light-bg'>
         </div>
       </Container>
       <Container className={style.section}>
