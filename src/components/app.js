@@ -19,7 +19,6 @@ import {
 import {
   Home,
   Myself,
-  Knowledge,
   Parkings,
   TheOffer,
 } from 'pages';
@@ -49,9 +48,6 @@ export default function App() {
           </Route>
           <Route exact path={AppRoute.Parkings}>
             <Parkings />
-          </Route>
-          <Route exact path={AppRoute.Knowledge}>
-            <Knowledge />
           </Route>
           <Route exact path={AppRoute.Home}>
             <Home />

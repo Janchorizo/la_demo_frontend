@@ -2,7 +2,6 @@ export default {
   /** Routes */
   'routes.home': '/',
   'routes.myself': '/myself',
-  'routes.knowledge': '/knowledge',
   'routes.parkings': '/parkings',
   'routes.offer': '/the_offer',
 
@@ -29,8 +28,6 @@ export default {
   'home.title': 'La Demo',
 
   'myself.title': 'Myself',
-
-  'knowledge.title': 'Knowledge',
 
   'parkings.title': 'Parkings',
 
