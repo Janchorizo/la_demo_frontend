@@ -99,13 +99,7 @@ export default function Home() {
         </h1>
         <div id={style['example-carrousel']}></div>
       </div>
-      <Container className={style.section}>
-        <div>
-          <h3>Some section title</h3>
-        </div>
-        <div className='light-bg'>
-        </div>
-      </Container>
+      <Container className={style.section}></Container>
     </PageContainer>
   );
 }
