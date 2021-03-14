@@ -1,6 +1,9 @@
 export {default as App} from './app';
-export {LanguageSelector} from './LanguageSelector';
-export {LocalizedRouter} from './localizedRouter';
-export {LocalizedSwitch} from './localizedSwitch';
-export {TopBar} from './TopBar';
-export {default as GlobalNavLinks} from './GlobalNavLinks';
+export {default as LanguageSelector} from './language_selector';
+export {default as LocalizedRouter} from './localized_router';
+export {default as LocalizedSwitch} from './localized_switch';
+export {default as TopBar} from './top_bar';
+export {default as GlobalNavLinks} from './global_nav_links';
+export {default as Container} from './container';
+export {default as PageContainer} from './page_container';
+export {default as Footer} from './footer';

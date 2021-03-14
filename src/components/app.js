@@ -9,6 +9,7 @@ import {
   LocalizedRouter,
   LocalizedSwitch,
   TopBar,
+  Footer,
 } from 'components';
 import {
   AppLanguage,
@@ -24,6 +25,12 @@ import {
 import {GithubBanner} from 'components/github_banner';
 import 'common/style/theme.css';
 
+
+/**
+ * App root component
+ * @component
+ * @return {React.Component}
+ */
 export default function App() {
   return (
     <div className='content-layout'>
@@ -49,6 +56,7 @@ export default function App() {
             <Home />
           </Route>
         </LocalizedSwitch>
+        <Footer />
       </LocalizedRouter>
     </div>
   );

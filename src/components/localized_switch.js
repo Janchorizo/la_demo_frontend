@@ -9,7 +9,7 @@ import {useIntl} from 'react-intl';
  * @param {string} path
  * @param {object} formatMessage
  * @param {string} locale
- * @return Localized string path or path array
+ * @return {string} Localized string path or path array
  */
 function localizeRoutePath(path, formatMessage, locale) {
   switch (typeof path) {
@@ -29,8 +29,10 @@ function localizeRoutePath(path, formatMessage, locale) {
  * LocalizedSwitch
  * A language aware switch that provides each <route> component
  * with a language prop.
+ * @component
+ * @return {React.Component}
  */
-export function LocalizedSwitch({children}) {
+export default function LocalizedSwitch({children}) {
   const {formatMessage, locale} = useIntl();
 
   return (
@@ -48,4 +50,8 @@ export function LocalizedSwitch({children}) {
 }
 
 LocalizedSwitch.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
 };

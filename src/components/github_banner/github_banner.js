@@ -7,6 +7,8 @@ import style from './style.module.css';
 
 /**
  * SVG Source code adapted from https://github.com/tholman/github-corners
+ * @component
+ * @return {React.Component}
  */
 export default function GithubBanner({url, fill='var(--main)', color='#fff'}) {
   const svgStyle = {

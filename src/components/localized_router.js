@@ -1,9 +1,17 @@
 import React from 'react';
 import {IntlProvider} from 'react-intl';
 import {Route, Redirect} from 'react-router-dom';
+import PropTypes from 'prop-types';
+// internal
 import {appStrings} from 'common/intl';
 
-export function LocalizedRouter({
+
+/**
+ * Locale-aware router. Injects locale props to children.
+ * @component
+ * @return {React.Component}
+ */
+export default function LocalizedRouter({
   children, // <route> components
   RouterComponent,
   defaultLanguage,
@@ -38,3 +46,12 @@ export function LocalizedRouter({
     </Route>
   </RouterComponent>;
 }
+
+LocalizedRouter.propTypes = {
+  children: PropTypes.oneOfType([
+    PropTypes.arrayOf(PropTypes.node),
+    PropTypes.node,
+  ]),
+  RouterComponent: PropTypes.any,
+  defaultLanguage: PropTypes.string,
+};

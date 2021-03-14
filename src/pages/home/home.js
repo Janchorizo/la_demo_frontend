@@ -1,46 +1,55 @@
 import React from 'react';
 // internal
+import {
+  PageContainer,
+  Container,
+} from 'components';
 import style from './style.module.css';
 
 
+/**
+ * Home page component.
+ * @component
+ * @return {React.Component}
+ */
 export default function Home() {
   return (
-    <div className={style.page}>
-      <section id='' className={`${style.section} content-layout`}>
+    <PageContainer>
+      <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
         </div>
         <div className='light-bg'>
         </div>
-      </section>
-      <section id='' className={`${style.section} content-layout`}>
+      </Container>
+      <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
         </div>
         <div className='light-bg'>
         </div>
-      </section>
-      <section id='' className={`${style.section} content-layout`}>
+      </Container>
+      <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
         </div>
         <div className='light-bg'>
         </div>
-      </section>
-      <section id='' className={`${style.section} content-layout`}>
+      </Container>
+      <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
         </div>
         <div className='light-bg'>
         </div>
-      </section>
-      <section id='' className={`${style.section} content-layout`}>
+      </Container>
+      <Container className={style.section}>
         <div>
           <h3>Some section title</h3>
         </div>
         <div className='light-bg'>
         </div>
-      </section>
-    </div>
+      </Container>
+    </PageContainer>
   );
 }
