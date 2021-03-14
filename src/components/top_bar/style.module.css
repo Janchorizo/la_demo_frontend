@@ -69,3 +69,27 @@
   color: var(--text-nav);
   font-weight: 500;
 }
+.extraButtonsContainer{
+  display: flex;
+  position: absolute;
+  top: calc(0px - var(--medium));
+  right: 0;
+  align-items: center;
+  height: var(--medium);
+}
+.extraButtonsContainer a.originButton{
+  background-color: none;
+  border: solid 2px var(--main);
+  margin: var(--small) 0;
+  color: var(--main);
+  display: inline-block;
+  text-align: center;
+  padding: 3px 6px;
+}
+.extraButtonsContainer button{
+  color: var(--grey);
+}
+.extraButtonsContainer button:hover{
+  color: var(--main);
+  box-shadow: none;
+}

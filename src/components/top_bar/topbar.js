@@ -36,6 +36,16 @@ export default function TopBar() {
           </a>
         </div>
         <div className={style.bottom}>
+          <div className={style.extraButtonsContainer}>
+            <a className={style.originButton}
+              href='https://elparking.com/'
+              target='blank'>
+              {formatMessage({id: 'topbar.origin_link'})}
+            </a>
+            <button className="pseudo">
+              {formatMessage({id: 'topbar.login'})}
+            </button>
+          </div>
           <ul className={style.mainNav}>
             <GlobalNavLinks />
           </ul>
