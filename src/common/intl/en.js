@@ -69,13 +69,18 @@ export default {
   'myself.learning_subtitle':
     'Practice, official documentation and good books',
   'myself.learning_step1_title': '1. Straight to work',
-  'myself.learning_step1_text': '',
+  'myself.learning_step1_text': ('There is nothing like a first prototype to' +
+    ' get in contact with a new technology.'),
   'myself.learning_step2_title': '2. Official documentation',
-  'myself.learning_step2_text': '',
+  'myself.learning_step2_text': ('A complete read of the official docs' +
+    ' allow digesting what was learnt with the first project.'),
   'myself.learning_step3_title': '3. Setting the base with good books',
-  'myself.learning_step3_text': '',
+  'myself.learning_step3_text': ('With a good context regarding the' +
+    ' teachnology it is possible to make the best use of books about it'),
   'myself.learning_step4_title': '4. Getting experience with time',
-  'myself.learning_step4_text': '',
+  'myself.learning_step4_text': ('It is now the time to develop using the' +
+    ' books as a reference in order to gain experience and secure the' +
+    ' knowledge.'),
   'myself.already_done': 'What have I already done?',
   'myself.already_done1_title': 'Data analysis and visualization with Jupyter',
   'myself.already_done1_text': '',

@@ -69,13 +69,19 @@ export default {
   'myself.learning_subtitle':
     'Practico, leo la documentación y profundizo con libros',
   'myself.learning_step1_title': '1. Al barro',
-  'myself.learning_step1_text': '',
+  'myself.learning_step1_text': ('Desarrollar un primer prototipo con la' +
+    ' tecnología es la mejor forma de entrar en contacto'),
   'myself.learning_step2_title': '2. Documentación oficial',
-  'myself.learning_step2_text': '',
-  'myself.learning_step3_title': '3. Libros técnicos para tener buenas bases',
-  'myself.learning_step3_text': '',
+  'myself.learning_step2_text': ('Una buena lectura de la documentación' +
+    ' oficial permite asentar lo aprendido con el primer proyecto'),
+  'myself.learning_step3_title': '3. Buenos libros para tener buenas bases',
+  'myself.learning_step3_text': ('Con un buen contexto ya se pueden' +
+    ' aprovechar los libros y sentar unas buenas bases para usar la' +
+    ' tecnología.'),
   'myself.learning_step4_title': '4. La experiencia se gana con el tiempo',
-  'myself.learning_step4_text': '',
+  'myself.learning_step4_text': ('Ahora lo importante es dedicar tiempo a' +
+    ' desarrollar usando los libros como referencia para ganar experiencia' +
+    ' y asegurar los conocimientos.'),
   'myself.already_done': '¿Qué he hecho ya?',
   'myself.already_done1_title': 'Análisis de datos y visualización con Jupyter',
   'myself.already_done1_text': '',
