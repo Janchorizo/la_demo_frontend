@@ -61,6 +61,40 @@ export default {
     'I have already tried a few stacks',
 
   'myself.title': 'Myself',
+  'myself.hero_title': 'Need more than fullstack?',
+  'myself.hero_subtitle': ('I got you there. I am used to change between ' +
+    'tasks and tools frequently; pointing me to it is enough to get me' +
+    ' started'),
+  'myself.learning_title': 'I learn ❝the oldschool way❞',
+  'myself.learning_subtitle':
+    'Practice, official documentation and good books',
+  'myself.learning_step1_title': '1. Straight to work',
+  'myself.learning_step1_text': '',
+  'myself.learning_step2_title': '2. Official documentation',
+  'myself.learning_step2_text': '',
+  'myself.learning_step3_title': '3. Setting the base with good books',
+  'myself.learning_step3_text': '',
+  'myself.learning_step4_title': '4. Getting experience with time',
+  'myself.learning_step4_text': '',
+  'myself.already_done': 'What have I already done?',
+  'myself.already_done1_title': 'Data analysis and visualization with Jupyter',
+  'myself.already_done1_text': '',
+  'myself.already_done2_title': 'Data visualization webapps',
+  'myself.already_done2_text': '',
+  'myself.already_done3_title': 'Headless React apps',
+  'myself.already_done3_text': '',
+  'myself.already_done4_title': 'Transfer Learning with Keras',
+  'myself.already_done4_text': '',
+  'myself.already_done5_title': 'Interactive surveys with Go + React on Azure',
+  'myself.already_done5_text': '',
+  'myself.more_title':
+    'What about my work experience and education??',
+  'myself.more_text':
+    ('Freshly comming out of university I own a Degree on COmputer Science' +
+     ' and a Master\'s Degree, but I have done more than just studying. You' +
+     ' can further read about me on my curriculum vitae.'),
+  'myself.more_link': 'See my currículum vitae',
+  'myself.cv_link': 'https://janchorizo.github.io/docs/Rodr%C3%ADguezD%C3%ADazAlejandro_CV_en.pdf',
 
   'parkings.title': 'Parkings',
 

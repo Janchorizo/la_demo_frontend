@@ -62,6 +62,40 @@ export default {
     'Ya he probado muchas combinaciones',
 
   'myself.title': 'Acerca de mí',
+  'myself.hero_title': '¿Fullstack y algo más?',
+  'myself.hero_subtitle': ('Sin problema. Estoy acostumbrado a cambiar entre' +
+    ' tareas y herramientas; bastará con pedirlo para que me ponga a ello'),
+  'myself.learning_title': 'Aprendo ❝a lo oldschool❞',
+  'myself.learning_subtitle':
+    'Practico, leo la documentación y profundizo con libros',
+  'myself.learning_step1_title': '1. Al barro',
+  'myself.learning_step1_text': '',
+  'myself.learning_step2_title': '2. Documentación oficial',
+  'myself.learning_step2_text': '',
+  'myself.learning_step3_title': '3. Libros técnicos para tener buenas bases',
+  'myself.learning_step3_text': '',
+  'myself.learning_step4_title': '4. La experiencia se gana con el tiempo',
+  'myself.learning_step4_text': '',
+  'myself.already_done': '¿Qué he hecho ya?',
+  'myself.already_done1_title': 'Análisis de datos y visualización con Jupyter',
+  'myself.already_done1_text': '',
+  'myself.already_done2_title': 'Web apps para visualización de datos',
+  'myself.already_done2_text': '',
+  'myself.already_done3_title': 'Headless React app',
+  'myself.already_done3_text': '',
+  'myself.already_done4_title': 'Transfer Learning con Keras',
+  'myself.already_done4_text': '',
+  'myself.already_done5_title':
+    'Formulario interactivo con Go + React en Azure',
+  'myself.already_done5_text': '',
+  'myself.more_title':
+    '¿Qué hay acerca de mis estudios y experiencia laboral?',
+  'myself.more_text':
+    ('Como "recién salido" de la universidad cuento con grado y máster' +
+     ' pero he hecho más cosas a parte de estudiar. En mi currículum vitae' +
+     ' puedes leer más acerca de mí.'),
+  'myself.more_link': 'Ver mi currículum vitae',
+  'myself.cv_link': 'https://janchorizo.github.io/docs/Rodr%C3%ADguezD%C3%ADazAlejandro_CV_es.pdf',
 
   'parkings.title': 'Parkings',
 
