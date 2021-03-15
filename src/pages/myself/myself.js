@@ -60,15 +60,17 @@ export default function Myself() {
           style={{backgroundImage: 'url(/assets/me_thinking.jpg)'}}>
         </div>
       </Container>
-      <Container id={style['hero']} className={style.section}>
-        <div>
-          <h1>{formatMessage({id: 'home.hero_title'})}</h1>
-          <h2>{formatMessage({id: 'home.hero_subtitle'})}</h2>
-        </div>
-        <div id={style['hero-img']}
-          style={{backgroundImage: 'url(/assets/me_thinking.jpg)'}}>
-        </div>
-      </Container>
+      <div id={style['more-prerow']}>
+      </div>
+      <div id={style['more']}>
+        <h1>
+          {formatMessage({id: 'myself.more_title'})}
+        </h1>
+        <h2>{formatMessage({id: 'myself.more_text'})}</h2>
+        <a target='blank' href={formatMessage({id: 'myself.cv_link'})}>
+          {formatMessage({id: 'myself.more_link'})} &#129130;
+        </a>
+      </div>
     </PageContainer>
   );
 }
