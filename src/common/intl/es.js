@@ -84,16 +84,28 @@ export default {
     ' y asegurar los conocimientos.'),
   'myself.already_done': '¿Qué he hecho ya?',
   'myself.already_done1_title': 'Análisis de datos y visualización con Jupyter',
-  'myself.already_done1_text': '',
+  'myself.already_done1_text': ('Manejo las librerías típicas para análisis' +
+    ' de datos como Pandas, NumPy, NLP, Matplotlib, Seaborn y otros.' +
+    ' He desarrollado cierta preferencia por hacer este tipo de análisis' +
+    ' usando Jupyter y sus widgets para crear informes interactivos.'),
   'myself.already_done2_title': 'Web apps para visualización de datos',
-  'myself.already_done2_text': '',
-  'myself.already_done3_title': 'Headless React app',
-  'myself.already_done3_text': '',
+  'myself.already_done2_text': ('Con backends implementados usando Python y' +
+    'Django o Flask, .Net, Go o Java; y frontends usand JS nativo, React,' +
+    ' o Vue, es un tipo de proyecto que disfruto haciendo.'),
+  'myself.already_done3_title': 'DevOps y sys-admin',
+  'myself.already_done3_text': ('Pese a no haberlo explotado del todo,' +
+    ' disfruto haciéndome mis "notebooks" de Ansible y automatizando' +
+    ' despliegues.'),
   'myself.already_done4_title': 'Transfer Learning con Keras',
-  'myself.already_done4_text': '',
+  'myself.already_done4_text': ('Aunque de forma anecdótica, también he' +
+    ' trabajado con redes neuronales para NLP, he estudiado funciones de' +
+    ' distancia e implementado una solución usando transfer learning.'),
   'myself.already_done5_title':
     'Formulario interactivo con Go + React en Azure',
-  'myself.already_done5_text': '',
+  'myself.already_done5_text': ('Recientemente descubrí lo eficiente que' +
+    ' es implementar un servidor en Go y poder tener un contenedor de Docker' +
+    ' que ocupa prácticamente lo que el ejecutable. Lo puse en práctica con' +
+    ' un formulario interactivo para el trabajo que desplegué en Azure'),
   'myself.more_title':
     '¿Qué hay acerca de mis estudios y experiencia laboral?',
   'myself.more_text':

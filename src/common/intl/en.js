@@ -83,17 +83,28 @@ export default {
     ' knowledge.'),
   'myself.already_done': 'What have I already done?',
   'myself.already_done1_title': 'Data analysis and visualization with Jupyter',
-  'myself.already_done1_text': '',
+  'myself.already_done1_text': ('I have experience using the main libraries' +
+    'such as Pandas, NumPy, NLP, Matplotlib, Seaborn and others. With time,' +
+    ' I came to appreciate building interactive reports using Jupyter and ' +
+    'its widgets.'),
   'myself.already_done2_title': 'Data visualization webapps',
-  'myself.already_done2_text': '',
-  'myself.already_done3_title': 'Headless React apps',
-  'myself.already_done3_text': '',
+  'myself.already_done2_text': ('With backends implemented in Python with' +
+    ' Flask or Django, ASP.Net, Go or Java; and frontends using native JS,' +
+    ' React or Vue, I enjoy implementing these kind of solutions.'),
+  'myself.already_done3_title': 'DevOps and sys-admin',
+  'myself.already_done3_text': ('Not being a proficient user, I still enjoy' +
+    ' making my Ansible notebooks and automating deployments.'),
   'myself.already_done4_title': 'Transfer Learning with Keras',
-  'myself.already_done4_text': '',
+  'myself.already_done4_text': ('I have worked with neural networks for NLP' +
+    'in the past, and tried transfer learning with Keras in this same' +
+    ' context.'),
   'myself.already_done5_title': 'Interactive surveys with Go + React on Azure',
-  'myself.already_done5_text': '',
+  'myself.already_done5_text': ('I have recently discovered how eficient is' +
+    'to implement a server in GoLang and have the Docker container be almost' +
+    'the same size as the binary. I made use of it at work for making an' +
+    ' interactive survey that I deployed on Azure.'),
   'myself.more_title':
-    'What about my work experience and education??',
+    'What about my work experience and education?',
   'myself.more_text':
     ('Freshly comming out of university I own a Degree on COmputer Science' +
      ' and a Master\'s Degree, but I have done more than just studying. You' +
