@@ -118,5 +118,35 @@ export default {
   'parkings.title': 'Parkings',
 
   'offer.title': 'La Oferta Laboral',
-
+  'offer.main-title':
+    'Un puesto donde disfrutaría trabajando',
+  'offer.subtitle': 'Tecnologías que sé y conocimientos que quiero',
+  'offer.col1_title': 'Fullstack',
+  'offer.col1_text':
+    ('Trabajando tanto en frontend como en backend es como más agusto me' +
+    ' encuentro.'),
+  'offer.col2_title': 'Producto propio',
+  'offer.col2_text': ('Trabajar en un producto propio es algo que' +
+    ' implica mayor interés por la calidad, y un excenario ideal para ' +
+    'aprender buenas prácticas.'),
+  'offer.col3_title': 'Equipo de renombre',
+  'offer.col3_text': ('Hace ya dos años que un buen amigo mío trabaja' +
+    ' en El Parking y sólo he hecho que oír hablar bien de sus compañeros.'),
+  'offer.label_ideas': ('Trabajar en El Parking supondría una oportunidad' +
+    ' para aplicar mis conocimientos a un uevo ámbito.'),
+  'offer.label_ci': ('Tengo un gran interés por el trabajo de DevOps' +
+    ' y aprender de un software comercial es un gran comienzo.'),
+  'offer.label_fullstack': ('Resolver problemas en distintos campos' +
+    ' es lo que realmente me apasiona.'),
+  'offer.label_php': ('Aunque es nuevo para mí, ya me he documentado' +
+    ' y lo he puesto en práctica con este proyecto.'),
+  'offer.label_db': ('Aunque conozco varias (ElasticSearch, SparQL, etc)' +
+    ', MySQL y Mongo son las que más a fondo he estudiado.'),
+  'offer.label_react': ('React es una de las pocas tecnologías que no he' +
+    ' dejado de usar ni un mes.'),
+  'offer.label_details': ('Como dibujante en mis tiempos libres desarrollé' +
+    ' un gran interés por la experiencia de usuario y la usabilidad.'),
+  'offer.label_remote': ('En el equipo de investigación aprendí a organizarme' +
+    ' y funcionar de forma autónoma; algo que realmente aprecio y por' +
+    ' lo que busco teletrabajar.'),
 };

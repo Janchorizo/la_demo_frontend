@@ -20,20 +20,20 @@ export default function TheOffer() {
     <PageContainer>
       <div id={style['main-container']}>
         <div id={style['main-container-title']}>
-          <h1>{formatMessage({id: 'home.versatility_section_title'})}</h1>
-          <h2>{formatMessage({id: 'home.versatility_section_subtitle'})}</h2>
+          <h1>{formatMessage({id: 'offer.main-title'})}</h1>
+          <h2>{formatMessage({id: 'offer.subtitle'})}</h2>
         </div>
         <div className={style.column}>
-          <h3>{formatMessage({id: 'home.versatility_section_col1_title'})}</h3>
-          <p>{formatMessage({id: 'home.versatility_section_col1_text'})}</p>
+          <h3>{formatMessage({id: 'offer.col1_title'})}</h3>
+          <p>{formatMessage({id: 'offer.col1_text'})}</p>
         </div>
         <div className={style.column}>
-          <h3>{formatMessage({id: 'home.versatility_section_col2_title'})}</h3>
-          <p>{formatMessage({id: 'home.versatility_section_col2_text'})}</p>
+          <h3>{formatMessage({id: 'offer.col2_title'})}</h3>
+          <p>{formatMessage({id: 'offer.col2_text'})}</p>
         </div>
         <div className={style.column}>
-          <h3>{formatMessage({id: 'home.versatility_section_col3_title'})}</h3>
-          <p>{formatMessage({id: 'home.versatility_section_col3_text'})}</p>
+          <h3>{formatMessage({id: 'offer.col3_title'})}</h3>
+          <p>{formatMessage({id: 'offer.col3_text'})}</p>
         </div>
       </div>
       <div id={style['card']}>
@@ -125,9 +125,7 @@ export default function TheOffer() {
           <br/>
           - Equipo de trabajo top que eliges tú
           <br/>
-          <div className={style.labeled} id='offer-people'>
           - Buenos compañeros
-          </div>
           <br/>
           - Flexibilidad de horario
           <br/>
@@ -141,40 +139,28 @@ export default function TheOffer() {
         </div>
         <div id={style['details-overlap-container']}>
           <LabelCard target='offer-ideas'>
-            Después de haber trabajado en multitud de proyectos, trabajar en
-            un único servicio es una oportunidad ideal para hacerlo bien.
+            {formatMessage({id: 'offer.label_ideas'})}
           </LabelCard>
           <LabelCard target='offer-ci'>
-            Uno de mis intereses es aprender buenas prácticas en entornos
-            comerciales y saber implementar DevOps a nivel profesional.
+            {formatMessage({id: 'offer.label_ci'})}
           </LabelCard>
           <LabelCard target='offer-fullstack'>
-            fullstack
+            {formatMessage({id: 'offer.label_fullstack'})}
           </LabelCard>
           <LabelCard target='offer-php'>
-            Es una tecnología nueva que estoy deseando aprender en profundidad.
+            {formatMessage({id: 'offer.label_php'})}
           </LabelCard>
           <LabelCard target='offer-db'>
-            Llevo aprendiendo bases de datos nuevas (ES, SparkQL, etc) desde
-            que terminé la carrera, aunque MySQL y MongoDB son las que más
-            he estudiado y usado.
+            {formatMessage({id: 'offer.label_db'})}
           </LabelCard>
           <LabelCard target='offer-react'>
-            Durante los últimos dos años React ha sido una constante en mi
-            trabajo diario.
+            {formatMessage({id: 'offer.label_react'})}
           </LabelCard>
           <LabelCard target='offer-details'>
-            Como artista en mi tiempo libre, UX es un aspecto que me
-            encanta desarrollar, y como desarrollador también aprecio un
-            trabajo bien hecho.
-          </LabelCard>
-          <LabelCard target='offer-people'>
-            Hace ya dos años que un buen amigo trabaja con vosotros y
-            pude corroborar la calidad del equipo.
+            {formatMessage({id: 'offer.label_details'})}
           </LabelCard>
           <LabelCard target='offer-remote'>
-            En el equipo de investigación aprendí a apreciar poder organizar
-            mi espacio de trabajo en mi propia casa, sin distracciones.
+            {formatMessage({id: 'offer.label_remote'})}
           </LabelCard>
         </div>
       </div>

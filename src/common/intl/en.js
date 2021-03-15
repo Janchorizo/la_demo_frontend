@@ -115,5 +115,33 @@ export default {
   'parkings.title': 'Parkings',
 
   'offer.title': 'The Job Offer',
-
+  'offer.main-title':
+    'A job where I would enjoy working',
+  'offer.subtitle': 'Technologies that I know and knowledge y whish to have',
+  'offer.col1_title': 'Fullstack',
+  'offer.col1_text':
+    ('It is when I get to work in both sides when I feel more comfortable.'),
+  'offer.col2_title': 'The company\'s own product',
+  'offer.col2_text': ('The best place to learn best practices is where you' +
+    ' are building a product for yourself, which I am thrilled to do.'),
+  'offer.col3_title': 'A well known team',
+  'offer.col3_text': ('It\'s been two years since a good friend of' +
+    ' mine entered El Parking, and I heard just good things' +
+    ' about his partners from him.'),
+  'offer.label_ideas': ('El Parking would be an ideal new place to put my' +
+    ' knowledge into practice.'),
+  'offer.label_ci': ('I have great interest in DevOps, and learning from' +
+    ' commercial software is the best way to start.'),
+  'offer.label_fullstack': ('What really excites me is solving problems in' +
+    ' different fields, not sticking just to one kind of development.'),
+  'offer.label_php': ('Even though this is a new technology to me, I have' +
+    ' already read about it and I put it in practice in this same project.'),
+  'offer.label_db': ('Among others that I know (ElasticSearch, SparQL, etc),' +
+    ', MySQL and Mongo are the two that I most used.'),
+  'offer.label_react': ('React has been a staple in my day to day work during' +
+    ' the last two years.'),
+  'offer.label_details': ('As a painter that I am too, I developed quite an' +
+    ' interest on UX and usability.'),
+  'offer.label_remote': ('In my previous job I learnt to organize myself in' +
+    ' the comodity of my home, which is why I now search for remote work.'),
 };
