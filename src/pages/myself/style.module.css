@@ -1,0 +1,42 @@
+.section > div{
+  display: block;
+  min-height: calc(3 * var(--large));
+  grid-column-start: 3;
+  grid-column-end: 4;
+  grid-row: 1;
+}
+.section > div:first-of-type{
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row: 1;
+}
+#hero-img,
+#buymeacoffee-img{
+  background-size: cover;
+}
+#hero{
+  height: calc(4 * var(--large));
+}
+#hero > div,
+#buymeacoffee > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+#hero h1{
+  font-size: 42px;
+  line-height: 48px;
+  font-weight: 500;
+  color: var(--dark);
+  padding-top: 0;
+}
+#hero h2{
+  font-size: 26px;
+  line-height: 38px;
+  font-weight: 400;
+  color: var(--dark);
+  padding: 0 0 0 16px;
+  border-left: solid 4px var(--highlight);
+}
+
