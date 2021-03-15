@@ -62,6 +62,58 @@ export default {
     'Ya he probado muchas combinaciones',
 
   'myself.title': 'Acerca de mí',
+  'myself.hero_title': '¿Fullstack y algo más?',
+  'myself.hero_subtitle': ('Sin problema. Estoy acostumbrado a cambiar entre' +
+    ' tareas y herramientas; bastará con pedirlo para que me ponga a ello'),
+  'myself.learning_title': 'Aprendo ❝a lo oldschool❞',
+  'myself.learning_subtitle':
+    'Practico, leo la documentación y profundizo con libros',
+  'myself.learning_step1_title': '1. Al barro',
+  'myself.learning_step1_text': ('Desarrollar un primer prototipo con la' +
+    ' tecnología es la mejor forma de entrar en contacto'),
+  'myself.learning_step2_title': '2. Documentación oficial',
+  'myself.learning_step2_text': ('Una buena lectura de la documentación' +
+    ' oficial permite asentar lo aprendido con el primer proyecto'),
+  'myself.learning_step3_title': '3. Buenos libros para tener buenas bases',
+  'myself.learning_step3_text': ('Con un buen contexto ya se pueden' +
+    ' aprovechar los libros y sentar unas buenas bases para usar la' +
+    ' tecnología.'),
+  'myself.learning_step4_title': '4. La experiencia se gana con el tiempo',
+  'myself.learning_step4_text': ('Ahora lo importante es dedicar tiempo a' +
+    ' desarrollar usando los libros como referencia para ganar experiencia' +
+    ' y asegurar los conocimientos.'),
+  'myself.already_done': '¿Qué he hecho ya?',
+  'myself.already_done1_title': 'Análisis de datos y visualización con Jupyter',
+  'myself.already_done1_text': ('Manejo las librerías típicas para análisis' +
+    ' de datos como Pandas, NumPy, NLP, Matplotlib, Seaborn y otros.' +
+    ' He desarrollado cierta preferencia por hacer este tipo de análisis' +
+    ' usando Jupyter y sus widgets para crear informes interactivos.'),
+  'myself.already_done2_title': 'Web apps para visualización de datos',
+  'myself.already_done2_text': ('Con backends implementados usando Python y' +
+    'Django o Flask, .Net, Go o Java; y frontends usand JS nativo, React,' +
+    ' o Vue, es un tipo de proyecto que disfruto haciendo.'),
+  'myself.already_done3_title': 'DevOps y sys-admin',
+  'myself.already_done3_text': ('Pese a no haberlo explotado del todo,' +
+    ' disfruto haciéndome mis "notebooks" de Ansible y automatizando' +
+    ' despliegues.'),
+  'myself.already_done4_title': 'Transfer Learning con Keras',
+  'myself.already_done4_text': ('Aunque de forma anecdótica, también he' +
+    ' trabajado con redes neuronales para NLP, he estudiado funciones de' +
+    ' distancia e implementado una solución usando transfer learning.'),
+  'myself.already_done5_title':
+    'Formulario interactivo con Go + React en Azure',
+  'myself.already_done5_text': ('Recientemente descubrí lo eficiente que' +
+    ' es implementar un servidor en Go y poder tener un contenedor de Docker' +
+    ' que ocupa prácticamente lo que el ejecutable. Lo puse en práctica con' +
+    ' un formulario interactivo para el trabajo que desplegué en Azure'),
+  'myself.more_title':
+    '¿Qué hay acerca de mis estudios y experiencia laboral?',
+  'myself.more_text':
+    ('Como "recién salido" de la universidad cuento con grado y máster' +
+     ' pero he hecho más cosas a parte de estudiar. En mi currículum vitae' +
+     ' puedes leer más acerca de mí.'),
+  'myself.more_link': 'Ver mi currículum vitae',
+  'myself.cv_link': 'https://janchorizo.github.io/docs/Rodr%C3%ADguezD%C3%ADazAlejandro_CV_es.pdf',
 
   'parkings.title': 'Parkings',
 

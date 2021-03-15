@@ -61,6 +61,56 @@ export default {
     'I have already tried a few stacks',
 
   'myself.title': 'Myself',
+  'myself.hero_title': 'Need more than fullstack?',
+  'myself.hero_subtitle': ('I got you there. I am used to change between ' +
+    'tasks and tools frequently; pointing me to it is enough to get me' +
+    ' started'),
+  'myself.learning_title': 'I learn ❝the oldschool way❞',
+  'myself.learning_subtitle':
+    'Practice, official documentation and good books',
+  'myself.learning_step1_title': '1. Straight to work',
+  'myself.learning_step1_text': ('There is nothing like a first prototype to' +
+    ' get in contact with a new technology.'),
+  'myself.learning_step2_title': '2. Official documentation',
+  'myself.learning_step2_text': ('A complete read of the official docs' +
+    ' allow digesting what was learnt with the first project.'),
+  'myself.learning_step3_title': '3. Setting the base with good books',
+  'myself.learning_step3_text': ('With a good context regarding the' +
+    ' teachnology it is possible to make the best use of books about it'),
+  'myself.learning_step4_title': '4. Getting experience with time',
+  'myself.learning_step4_text': ('It is now the time to develop using the' +
+    ' books as a reference in order to gain experience and secure the' +
+    ' knowledge.'),
+  'myself.already_done': 'What have I already done?',
+  'myself.already_done1_title': 'Data analysis and visualization with Jupyter',
+  'myself.already_done1_text': ('I have experience using the main libraries' +
+    'such as Pandas, NumPy, NLP, Matplotlib, Seaborn and others. With time,' +
+    ' I came to appreciate building interactive reports using Jupyter and ' +
+    'its widgets.'),
+  'myself.already_done2_title': 'Data visualization webapps',
+  'myself.already_done2_text': ('With backends implemented in Python with' +
+    ' Flask or Django, ASP.Net, Go or Java; and frontends using native JS,' +
+    ' React or Vue, I enjoy implementing these kind of solutions.'),
+  'myself.already_done3_title': 'DevOps and sys-admin',
+  'myself.already_done3_text': ('Not being a proficient user, I still enjoy' +
+    ' making my Ansible notebooks and automating deployments.'),
+  'myself.already_done4_title': 'Transfer Learning with Keras',
+  'myself.already_done4_text': ('I have worked with neural networks for NLP' +
+    'in the past, and tried transfer learning with Keras in this same' +
+    ' context.'),
+  'myself.already_done5_title': 'Interactive surveys with Go + React on Azure',
+  'myself.already_done5_text': ('I have recently discovered how eficient is' +
+    'to implement a server in GoLang and have the Docker container be almost' +
+    'the same size as the binary. I made use of it at work for making an' +
+    ' interactive survey that I deployed on Azure.'),
+  'myself.more_title':
+    'What about my work experience and education?',
+  'myself.more_text':
+    ('Freshly comming out of university I own a Degree on COmputer Science' +
+     ' and a Master\'s Degree, but I have done more than just studying. You' +
+     ' can further read about me on my curriculum vitae.'),
+  'myself.more_link': 'See my currículum vitae',
+  'myself.cv_link': 'https://janchorizo.github.io/docs/Rodr%C3%ADguezD%C3%ADazAlejandro_CV_en.pdf',
 
   'parkings.title': 'Parkings',
 
