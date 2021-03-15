@@ -8,3 +8,4 @@ export {default as Container} from './container';
 export {default as PageContainer} from './page_container';
 export {default as Footer} from './footer';
 export {default as TileLink} from './tile_link';
+export {default as LabelCard} from './label_card';
