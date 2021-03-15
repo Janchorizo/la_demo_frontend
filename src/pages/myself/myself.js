@@ -51,15 +51,29 @@ export default function Myself() {
           <h4>{formatMessage({id: 'myself.learning_step4_text'})}</h4>
         </div>
       </div>
-      <Container id={style['hero']} className={style.section}>
-        <div>
-          <h1>{formatMessage({id: 'home.hero_title'})}</h1>
-          <h2>{formatMessage({id: 'home.hero_subtitle'})}</h2>
+      <div id={style['experience']}>
+        <h1>{formatMessage({id: 'myself.already_done'})}</h1>
+        <div className={style.moreEntry}>
+          <h2>{formatMessage({id: 'myself.already_done1_title'})}</h2>
+          <p>{formatMessage({id: 'myself.already_done1_text'})}</p>
         </div>
-        <div id={style['hero-img']}
-          style={{backgroundImage: 'url(/assets/me_thinking.jpg)'}}>
+        <div className={style.moreEntry}>
+          <h2>{formatMessage({id: 'myself.already_done2_title'})}</h2>
+          <p>{formatMessage({id: 'myself.already_done2_text'})}</p>
         </div>
-      </Container>
+        <div className={style.moreEntry}>
+          <h2>{formatMessage({id: 'myself.already_done3_title'})}</h2>
+          <p>{formatMessage({id: 'myself.already_done3_text'})}</p>
+        </div>
+        <div className={style.moreEntry}>
+          <h2>{formatMessage({id: 'myself.already_done4_title'})}</h2>
+          <p>{formatMessage({id: 'myself.already_done4_text'})}</p>
+        </div>
+        <div className={style.moreEntry}>
+          <h2>{formatMessage({id: 'myself.already_done5_title'})}</h2>
+          <p>{formatMessage({id: 'myself.already_done5_text'})}</p>
+        </div>
+      </div>
       <div id={style['more-prerow']}>
       </div>
       <div id={style['more']}>

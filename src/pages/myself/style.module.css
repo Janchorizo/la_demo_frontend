@@ -185,3 +185,28 @@
   color: var(--main);
   font-weight: 500;
 }
+#experience{
+  display: flex;
+  flex-direction: column;
+  margin: var(--medium);
+  color: var(--text);
+  position: relative;
+}
+#experience h1{
+  font-size: 28px;
+}
+.moreEntry h2{
+  font-weight: 500;
+  font-size: 20px;
+
+}
+.moreEntry p{
+  font-weight: 100;
+  font-size: 16px;
+  margin: 0;
+  max-width: 650px;
+  width: 100%;
+}
+.moreEntry{
+  margin-bottom: 1em;
+}
