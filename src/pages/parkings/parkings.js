@@ -38,19 +38,30 @@ function useTiles() {
  * @return {Array} The current map and a callback to
  * fetch the next one.
  */
-function useMaps() {
-  const [maps, setMaps] = useState(null);
+function useMap() {
+  const [map, setMap] = useState(null);
 
   useEffect(() => {
     window.fetch(api_endpoint + 'maps').then((res) => {
       res.json().then((jsonRes) => {
         const mapArray = jsonRes.res;
-        setMaps(mapArray);
+        setMap(mapArray[0]);
       });
     });
   }, []);
 
-  return maps;
+  function fetchMap(index){
+    window.fetch(`${api_endpoint}maps?index=${index}/`).then((res) => {
+      res.json().then((jsonRes) => {
+        const mapArray = jsonRes.res;
+        if (mapArray?.[0] != undefined) {
+          setMap(mapArray[0]);
+        }
+      });
+    });
+  }
+
+  return [map, fetchMap];
 }
 
 
@@ -60,9 +71,9 @@ function useMaps() {
  * @return {React.Component}
  */
 export default function Parkings() {
-  const {formatMessage} = useIntl();
+  const {formatMessage, locale} = useIntl();
   const tiles = useTiles();
-  const maps = useMaps();
+  const [map, fetchMap] = useMap();
 
   return (
     <PageContainer>
@@ -85,12 +96,26 @@ export default function Parkings() {
           <p>{formatMessage({id: 'parkings.step3_text'})}</p>
         </div>
       </div>
+      <h4 id={style['map-name']}>
+        {map?.name != undefined ? map.name[locale] : ''}
+      </h4>
       <div id={style['game-container']}>
-        {!(tiles && maps) ? '' : (
-          <ParkingGrid map={maps[0]}
+        {!(tiles && map) ? '' : (
+          <ParkingGrid map={map}
             editable={false}
             tilesById={tiles}/>
         )}
+        <div id={style.controls}>
+          <button>
+            📹
+          </button>
+          <button onClick={() => fetchMap(Math.max(0, map.index - 1))}>
+            🢦
+          </button>
+          <button onClick={() => fetchMap(map.index + 1)}>
+            🢧
+          </button>
+        </div>
       </div>
       <div id={style['editor-header']}>
         <h1>{formatMessage({id: 'parkings.editor_title'})}</h1>
