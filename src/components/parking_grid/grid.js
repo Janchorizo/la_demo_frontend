@@ -29,7 +29,7 @@ export default function ParkingGrid({
     'south': 2,
     'west': 3,
   };
-  console.log(tilesById)
+
   const rows = map.layout.map((row, rowIdx) =>
     <div key={rowIdx} className={style.row}>
       {row.map((tile, tileIdx) => {
@@ -37,8 +37,6 @@ export default function ParkingGrid({
         const rotation = orientation_to_rotation[tileData.orientation];
         tileData.efec_entry = (tileData.entry + rotation) % 3;
         tileData.efec_exit = (tileData.entry + rotation) % 3;
-
-        console.log(tile, tileData)
 
         return <ParkingTile key={`${rowIdx}-${tileIdx}`} tile={tileData}/>;
       })

@@ -11,3 +11,4 @@ export {default as TileLink} from './tile_link';
 export {default as LabelCard} from './label_card';
 export {default as ParkingTile} from './parking_tile';
 export {default as ParkingGrid} from './parking_grid';
+export {default as MapEditor} from './map_editor';
