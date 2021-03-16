@@ -23,6 +23,11 @@ function useMap(){
 }
 
 
+function sendMap(map){
+
+}
+
+
 /**
  * Fixed-size Parking grid.
  * @component
@@ -49,8 +54,14 @@ export default function MapEditor({
 
   return (
     <div id={style.editor}>
-      <input value={map.name.es} onChange={onNameChange}/>
+      <div id={style.input}>
+        <label for='new-map-name'>Ponle nombre al mapa</label>
+        <input id='new-map-name' value={map.name.es} onChange={onNameChange}/>
+      </div>
       <ParkingGrid tilesById={tilesById} map={map} editable={true} onEdit={onEdit}/>
+      <button onClick={() => sendMap(map)}>
+        Guardar el mapa
+      </button>
     </div>
   )
 }
