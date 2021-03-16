@@ -1,0 +1,9 @@
+.grid{
+    display: flex;
+    flex-direction: column;
+    height: calc(5 * 128px);
+    width: calc(5 * 128px);
+}
+.row{
+    display: flex;
+}
