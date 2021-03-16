@@ -12,6 +12,10 @@ import style from './style.module.css';
 const apiPath = 'http://localhost:8000/api/';
 
 
+/**
+ * React effect that fetches and keeps tile the configuration.
+ * @return {object} A mapping of tile ids to configuration.
+ */
 function useTiles() {
   const [tiles, setTiles] = useState(null);
 
@@ -31,6 +35,11 @@ function useTiles() {
 }
 
 
+/**
+ * Side effect for fetching maps
+ * @return {Array} The current map and a callback to
+ * fetch the next one.
+ */
 function useMaps() {
   const [maps, setMaps] = useState(null);
 

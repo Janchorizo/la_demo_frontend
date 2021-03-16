@@ -8,6 +8,89 @@ import style from './style.module.css';
 
 
 /**
+ * Tile hover callback to change the current focused cell.
+ * @param {int} row The row index
+ * @param {int} col The col index
+ * @param {function} setFocused Callback to set the focused cell
+ */
+function onHover(row, col, setFocused) {
+  if (row === null || col === null) {
+    setFocused(null);
+  } else {
+    setFocused({row, col});
+  }
+}
+
+
+/**
+ * Cyles the tile type one further in the list and sets it in the map.
+ * @param {object} map The current map
+ * @param {object} focused An object with the focused row and column
+ * @param {object} tilesById A mapping between tile ids and specs
+ * @param {function} onEdit A callback to set the new map
+ */
+function onChangePrevClick(map, focused, tilesById, onEdit) {
+  if (focused == null) {
+    return;
+  }
+  const currentTile = map.layout[focused.row][focused.col];
+  const currentTypeIdx = Object.keys(tilesById).indexOf(currentTile.id);
+  const nextTypeIdx = (currentTypeIdx == 0 ?
+    Object.keys(tilesById).length - 1 :
+    (currentTypeIdx - 1) % Object.keys(tilesById).length);
+  map.layout[focused.row][focused.col].id =
+    Object.keys(tilesById)[nextTypeIdx];
+  onEdit(map);
+}
+
+
+/**
+ * Rotates the tile clock-wise and sets it in the map.
+ * @param {object} map The current map
+ * @param {object} focused An object with the focused row and column
+ * @param {object} tilesById A mapping between tile ids and specs
+ * @param {function} onEdit A callback to set the new map
+ */
+function onRotateClick(map, focused, tilesById, onEdit) {
+  if (focused == null) {
+    return;
+  }
+
+  const orientation2rotation = {
+    'north': 0,
+    'east': 1,
+    'south': 2,
+    'west': 3,
+  };
+
+  const currentTile = map.layout[focused.row][focused.col];
+  const rotation = orientation2rotation[currentTile.orientation];
+  const nextOrientation =
+    Object.keys(orientation2rotation)[(rotation + 1) % 4];
+  map.layout[focused.row][focused.col].orientation = nextOrientation;
+  onEdit(map);
+}
+
+
+/**
+ * Cyles the tile type one before in the list and sets it in the map.
+ * @param {object} map The current map
+ * @param {object} focused An object with the focused row and column
+ * @param {object} tilesById A mapping between tile ids and specs
+ * @param {function} onEdit A callback to set the new map
+ */
+function onChangeNextClick(map, focused, tilesById, onEdit) {
+  if (focused == null) {
+    return;
+  }
+  const currentTile = map.layout[focused.row][focused.col];
+  const currentTypeIdx = Object.keys(tilesById).indexOf(currentTile.id);
+  const nextTypeIdx = (currentTypeIdx + 1) % Object.keys(tilesById).length;
+  map.layout[focused.row][focused.col].id = Object.keys(tilesById)[nextTypeIdx];
+  onEdit(map);
+}
+
+/**
  * Fixed-size Parking grid.
  * @component
  * @return {React.Component}
@@ -24,67 +107,23 @@ export default function ParkingGrid({
     editable === true ? style.editable : '',
   ].join(' ');
 
-  const orientation_to_rotation = {
+  const orientation2rotation = {
     'north': 0,
     'east': 1,
     'south': 2,
     'west': 3,
   };
 
-  function onHover(row, col) {
-    if (row === null || col === null) {
-      setFocused(null);
-    } else {
-      setFocused({row, col});
-    }
-  }
-
-  function onChangePrevClick() {
-    if (focused == null) {
-      return;
-    }
-    const currentTile = map.layout[focused.row][focused.col];
-    const currentTypeIdx = Object.keys(tilesById).indexOf(currentTile.id);
-    const nextTypeIdx = (currentTypeIdx == 0 ?
-      Object.keys(tilesById).length - 1 :
-      (currentTypeIdx - 1) % Object.keys(tilesById).length);
-    map.layout[focused.row][focused.col].id = Object.keys(tilesById)[nextTypeIdx];
-    onEdit(map);
-  }
-
-  function onRotateClick() {
-    if (focused == null) {
-      return;
-    }
-    const currentTile = map.layout[focused.row][focused.col];
-    const rotation = orientation_to_rotation[currentTile.orientation];
-    const nextOrientation =
-      Object.keys(orientation_to_rotation)[(rotation + 1) % 4];
-    map.layout[focused.row][focused.col].orientation = nextOrientation;
-    onEdit(map);
-  }
-
-  function onChangeNextClick() {
-    if (focused == null) {
-      return;
-    }
-    const currentTile = map.layout[focused.row][focused.col];
-    const currentTypeIdx = Object.keys(tilesById).indexOf(currentTile.id);
-    const nextTypeIdx = (currentTypeIdx + 1) % Object.keys(tilesById).length;
-    map.layout[focused.row][focused.col].id = Object.keys(tilesById)[nextTypeIdx];
-    onEdit(map);
-  }
-
   const rows = map.layout.map((row, rowIdx) =>
     <div key={rowIdx} className={style.row}>
       {row.map((tile, tileIdx) => {
         const tileData = {...tile, ...tilesById[tile.id]};
-        const rotation = orientation_to_rotation[tileData.orientation];
+        const rotation = orientation2rotation[tileData.orientation];
         tileData.efec_entry = (tileData.entry + rotation) % 3;
         tileData.efec_exit = (tileData.entry + rotation) % 3;
 
         return <ParkingTile
-          onMouseEnter={() => onHover(rowIdx, tileIdx)}
+          onMouseEnter={() => onHover(rowIdx, tileIdx, setFocused)}
           key={`${rowIdx}-${tileIdx}`}
           tile={tileData}/>;
       })
@@ -100,15 +139,21 @@ export default function ParkingGrid({
 
   return (
     <div className={gridCssClasses}
-      onMouseLeave={() => onHover(null, null)}>
+      onMouseLeave={() => onHover(null, null, setFocused)}>
       <div id={style.menu} style={menuStyle}>
-        <button onClick={() => onChangePrevClick()}>
+        <button onClick={
+          () => onChangePrevClick(map, focused, tilesById, onEdit)
+        }>
           🢦
         </button>
-        <button onClick={() => onRotateClick()}>
+        <button onClick={
+          () => onRotateClick(map, focused, tilesById, onEdit)
+        }>
           ↷
         </button>
-        <button onClick={() => onChangeNextClick()}>
+        <button onClick={
+          () => onChangeNextClick(map, focused, tilesById, onEdit)
+        }>
           🢧
         </button>
       </div>

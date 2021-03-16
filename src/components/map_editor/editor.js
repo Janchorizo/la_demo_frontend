@@ -8,6 +8,10 @@ import {
 import style from './style.module.css';
 
 
+/**
+ * Effect to keep a map state with a valid default value
+ * @return {array} The map and a callback to change it
+ */
 function useMap() {
   const defaultLayout = [[], [], [], [], []];
   defaultLayout.forEach((row, rowIdx) => {
@@ -24,8 +28,38 @@ function useMap() {
 }
 
 
+/**
+ * Uses the API to send the map to storage
+ * @param {object} map The map to be saved
+ */
 function sendMap(map) {
 
+}
+
+
+/**
+ * Executes the callback on a new version of the map
+ * @param {object} edited The updated map
+ * @param {function} setMap Callback to set the map
+ */
+function onEdit(edited, setMap) {
+  const newMap = Object.assign({}, edited);
+  setMap(newMap);
+}
+
+
+/**
+ * Event hanlder for the map name input
+ * @param {object} e The evenet object
+ * @param {object} map The current map object
+ * @param {function} setMap Callback to set the map
+ */
+function onNameChange(e, map, setMap) {
+  const newName = {
+    es: e.target.value,
+    en: e.target.value,
+  };
+  setMap({...map, name: newName});
 }
 
 
@@ -40,29 +74,21 @@ export default function MapEditor({
   const {formatMessage} = useIntl();
   const [map, setMap] = useMap();
 
-  function onEdit(edited) {
-    const newMap = Object.assign({}, edited);
-    setMap(newMap);
-  }
-
-  function onNameChange(e) {
-    const newName = {
-      es: e.target.value,
-      en: e.target.value,
-    };
-    setMap({...map, name: newName});
-  }
-
   return (
     <div id={style.editor}>
       <div id={style.input}>
-        <label htmlFor='new-map-name'>{formatMessage({id: 'parkings.nameInput'})}</label>
+        <label htmlFor='new-map-name'>
+          {formatMessage({id: 'parkings.nameInput'})}
+        </label>
         <input placeholder='. . .'
           id='new-map-name'
           value={map.name.es}
-          onChange={onNameChange}/>
+          onChange={(e) => onNameChange(e, map, setMap)}/>
       </div>
-      <ParkingGrid tilesById={tilesById} map={map} editable={true} onEdit={onEdit}/>
+      <ParkingGrid tilesById={tilesById}
+        map={map}
+        editable={true}
+        onEdit={(d) => onEdit(d, setMap)}/>
       <button onClick={() => sendMap(map)}>
         {formatMessage({id: 'parkings.save'})}
       </button>
