@@ -9,7 +9,7 @@ import style from './style.module.css';
  * @component
  * @return {React.Component}
  */
-export default function ParkingTile({tile}){
+export default function ParkingTile({tile, ...props}) {
   const angle = {
     'north': '0deg',
     'east': '90deg',
@@ -22,16 +22,15 @@ export default function ParkingTile({tile}){
     transform: `rotate(${angle})`,
   };
 
-  return <div className={style.tile}
-    style={tileStyle}/>
+  return <div className={style.tile} style={tileStyle} {...props}/>;
 }
 
 ParkingTile.propTypes = {
   tile: PropTypes.shape({
     id: PropTypes.string,
     orientation: PropTypes.oneOf([
-      'north', 'east', 'south', 'west'
+      'north', 'east', 'south', 'west',
     ]),
-    tile_img: PropTypes.string,
-  })
+    img_path: PropTypes.string,
+  }),
 };
