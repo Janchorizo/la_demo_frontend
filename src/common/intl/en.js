@@ -113,6 +113,32 @@ export default {
   'myself.cv_link': 'https://janchorizo.github.io/docs/Rodr%C3%ADguezD%C3%ADazAlejandro_CV_en.pdf',
 
   'parkings.title': 'Parkings',
+  'parkings.header': ('Parkings and APIs'),
+  'parkings.subtitle': ('An interactive minigame with a PHP backend'),
+  'parkings.description': ('Execute and design maps where my curriculum will' +
+    ' arrive at the El Parking\'s officies.' +
+    ' El Parking.'),
+  'parkings.step1_title': ('Try the existing maps'),
+  'parkings.step1_text': ('Maps are retrieved using through an API' +
+    ' implemented with PHP7 and Yii, which stores the cells and maps\'' +
+    ' data in MongoDB.'),
+  'parkings.step2_title': ('Execute the animation'),
+  'parkings.step2_text': ('The CV will get out of my home and will require' +
+    ' paying at parkings and tolls, but no time will be wasted thanks' +
+    ' to the app El Parking.'),
+  'parkings.step3_title': ('Design your own maps'),
+  'parkings.step3_text': ('It is as easy as changing the cell types, rotating' +
+    ' them, and giving the map an unique name.'),
+  'parkings.editor_title': ('Create a new map'),
+  'parkings.editor_desc': ('Moving the cursor over the cells will showa menu' +
+    ' for changing its type and rotating it.'),
+  'parkings.editor_alert': ('As in real life, this will not work if the' +
+    ' CV can\'t manage it to arrive at El Parking.'),
+  'parkings.more_title': ('How was it made?'),
+  'parkings.more_text': ('I used the anounced stack at the job offer,' +
+    ' and you can checkout the repos at Github. The server was deployed to' +
+    ' Heroku and the webapp using Netlify.'),
+  'parkings.more_link': ('Checkout my Github'),
 
   'offer.title': 'The Job Offer',
   'offer.main-title':

@@ -116,6 +116,32 @@ export default {
   'myself.cv_link': 'https://janchorizo.github.io/docs/Rodr%C3%ADguezD%C3%ADazAlejandro_CV_es.pdf',
 
   'parkings.title': 'Parkings',
+  'parkings.header': ('Parkings y APIs'),
+  'parkings.subtitle': ('Un miniuego interactivo con un backend en PHP'),
+  'parkings.description': ('Ejecuta y diseña mapas en los que mi' +
+    ' currículum vitae salga de mi casa y llegue a las oficinas de' +
+    ' El Parking.'),
+  'parkings.step1_title': ('Prueba los mapas que ya existen'),
+  'parkings.step1_text': ('Los mapas se obitenen por una API implementada' +
+    ' en PHP7 + Yii que almacena las y celdas y los mapas en MongoDB.'),
+  'parkings.step2_title': ('Ejecuta la animación'),
+  'parkings.step2_text': ('El CV saldrá de mi casa y tendrá que pagar' +
+    ' dinero al pasar por un parking o peaje, pero no le costará tiempo' +
+    ' gracias a la app El Parking.'),
+  'parkings.step3_title': ('Diseña y sube tus mapas'),
+  'parkings.step3_text': ('Tan fácil como cambiar el tipo de celda,' +
+    ' girarlas y darle un nombre único a tu creación.'),
+  'parkings.editor_title': ('Crea tu propio mapa'),
+  'parkings.editor_desc': ('Al pasar por encima de una celda aparecerá' +
+    ' un menú para cambiar su tipo y girarla.'),
+  'parkings.editor_alert': ('Como en la vida real, el minijuego no' +
+    ' funcionará si no hay un camino para que lleve el CV a El Parking.'),
+  'parkings.more_title': ('¿Tienes interés por cómo está hecho?'),
+  'parkings.more_text': ('Usé las tecnologías que se anunciaban en' +
+    ' la oferta laboral, y puedes echarle un vistazo a los repositorios' +
+    ' en Github. Desplegué el backend usando Heroku y la webapp con' +
+    ' Netlify.'),
+  'parkings.more_link': ('Echa un vistazo a mi Github'),
 
   'offer.title': 'La Oferta Laboral',
   'offer.main-title':
