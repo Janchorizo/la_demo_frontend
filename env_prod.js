@@ -1,0 +1,1 @@
+export const api_endpoint = "https://la-demo-backend.herokuapp.com/api/";

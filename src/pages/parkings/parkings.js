@@ -6,10 +6,8 @@ import {
   ParkingGrid,
   MapEditor,
 } from 'components';
+import {api_endpoint} from 'env';
 import style from './style.module.css';
-
-
-const apiPath = 'http://localhost:8000/api/';
 
 
 /**
@@ -20,7 +18,7 @@ function useTiles() {
   const [tiles, setTiles] = useState(null);
 
   useEffect(() => {
-    window.fetch(apiPath + 'tiles').then((res) => {
+    window.fetch(api_endpoint + 'tiles').then((res) => {
       res.json().then((jsonRes) => {
         const tileArray = jsonRes.res;
         const tilesById = Object.fromEntries(
@@ -44,7 +42,7 @@ function useMaps() {
   const [maps, setMaps] = useState(null);
 
   useEffect(() => {
-    window.fetch(apiPath + 'maps').then((res) => {
+    window.fetch(api_endpoint + 'maps').then((res) => {
       res.json().then((jsonRes) => {
         const mapArray = jsonRes.res;
         setMaps(mapArray);

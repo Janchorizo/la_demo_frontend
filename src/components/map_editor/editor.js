@@ -5,6 +5,7 @@ import PropTypes from 'prop-types';
 import {
   ParkingGrid,
 } from 'components';
+import {api_endpoint} from 'env';
 import style from './style.module.css';
 
 
@@ -33,8 +34,7 @@ function useMap() {
  * @param {object} map The map to be saved
  */
 function sendMap(map) {
-  const apiPath = 'http://localhost:8000/api/';
-  fetch(apiPath + 'maps', {
+  fetch(api_endpoint + 'maps', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json'
