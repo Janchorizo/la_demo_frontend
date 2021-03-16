@@ -67,14 +67,14 @@ export default function Parkings() {
         </div>
         <div>
           <h3>{formatMessage({id: 'parkings.step1_title'})}</h3>
-          <p>{formatMessage({id: 'parkings.step1_title'})}</p>
+          <p>{formatMessage({id: 'parkings.step1_text'})}</p>
         </div>
         <div>
           <h3>{formatMessage({id: 'parkings.step2_title'})}</h3>
           <p>{formatMessage({id: 'parkings.step2_text'})}</p>
         </div>
         <div>
-          <h3>{formatMessage({id: 'parkings.step3_text'})}</h3>
+          <h3>{formatMessage({id: 'parkings.step3_title'})}</h3>
           <p>{formatMessage({id: 'parkings.step3_text'})}</p>
         </div>
       </div>
@@ -85,20 +85,26 @@ export default function Parkings() {
             tilesById={tiles}/>
         )}
       </div>
+      <div id={style['editor-header']}>
+        <h1>{formatMessage({id: 'parkings.editor_title'})}</h1>
+        <p>{formatMessage({id: 'parkings.editor_desc'})}</p>
+        <span>{formatMessage({id: 'parkings.editor_alert'})}</span>
+        <hr/>
+      </div>
       <div id={style['editor-container']}>
-      {!tiles ? '' : (
-          <MapEditor tilesById={tiles}/>
-        )}
+        {!tiles ? '' : (
+            <MapEditor tilesById={tiles}/>
+          )}
       </div>
       <div id={style['more-prerow']}>
       </div>
       <div id={style['more']}>
         <h1>
-          {formatMessage({id: 'myself.more_title'})}
+          {formatMessage({id: 'parkings.more_title'})}
         </h1>
-        <h2>{formatMessage({id: 'myself.more_text'})}</h2>
-        <a target='blank' href={formatMessage({id: 'myself.cv_link'})}>
-          {formatMessage({id: 'myself.more_link'})} &#129130;
+        <h2>{formatMessage({id: 'parkings.more_text'})}</h2>
+        <a target='blank' href='https://github.com/Janchorizo'>
+          {formatMessage({id: 'parkings.more_link'})} &#129130;
         </a>
       </div>
     </PageContainer>
