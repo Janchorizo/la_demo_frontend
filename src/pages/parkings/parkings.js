@@ -4,7 +4,7 @@ import {useIntl} from 'react-intl';
 import {
   PageContainer,
   ParkingGrid,
-  MapEditor
+  MapEditor,
 } from 'components';
 import style from './style.module.css';
 
@@ -20,11 +20,11 @@ function useTiles() {
       res.json().then((jsonRes) => {
         const tileArray = jsonRes.res;
         const tilesById = Object.fromEntries(
-          tileArray.map((tile) => [tile.id, tile])
+            tileArray.map((tile) => [tile.id, tile]),
         );
         setTiles(tilesById);
       });
-    })
+    });
   }, []);
 
   return tiles;
@@ -40,7 +40,7 @@ function useMaps() {
         const mapArray = jsonRes.res;
         setMaps(mapArray);
       });
-    })
+    });
   }, []);
 
   return maps;
