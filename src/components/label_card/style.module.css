@@ -1,0 +1,22 @@
+.card{
+  background: var(--light);
+  padding: var(--small);
+  margin: var(--small);
+  border-left: solid var(--small) var(--highlight);
+  font-size: 14px;
+  font-weight: 100;
+  color: var(--darker);
+  position: relative;
+}
+.card svg{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  overflow: visible;
+}
+.card svg line{
+  stroke: var(--highlight);
+  stroke-width: 2px;
+}
