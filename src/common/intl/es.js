@@ -142,6 +142,8 @@ export default {
     ' en Github. Desplegué el backend usando Heroku y la webapp con' +
     ' Netlify.'),
   'parkings.more_link': ('Echa un vistazo a mi Github'),
+  'parkings.nameInput': 'Dale un nombre al mapa',
+  'parkings.save': 'Guardar',
 
   'offer.title': 'La Oferta Laboral',
   'offer.main-title':

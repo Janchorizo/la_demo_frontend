@@ -139,6 +139,8 @@ export default {
     ' and you can checkout the repos at Github. The server was deployed to' +
     ' Heroku and the webapp using Netlify.'),
   'parkings.more_link': ('Checkout my Github'),
+  'parkings.nameInput': 'Name the map',
+  'parkings.save': 'Save',
 
   'offer.title': 'The Job Offer',
   'offer.main-title':
