@@ -120,7 +120,7 @@ export default function ParkingGrid({
         const tileData = {...tile, ...tilesById[tile.id]};
         const rotation = orientation2rotation[tileData.orientation];
         tileData.efec_entry = (tileData.entry + rotation) % 3;
-        tileData.efec_exit = (tileData.entry + rotation) % 3;
+        tileData.efec_exit = (tileData.exit + rotation) % 3;
 
         return <ParkingTile
           onMouseEnter={() => onHover(rowIdx, tileIdx, setFocused)}
