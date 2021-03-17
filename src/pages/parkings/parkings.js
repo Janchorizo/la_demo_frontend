@@ -244,27 +244,6 @@ export default function Parkings() {
 
   return (
     <PageContainer>
-      <div id={style['game-container']}>
-        <div id={style.cv} ref={cvRef}>
-          CV
-        </div>
-        {!(tiles && map) ? '' : (
-          <ParkingGrid map={map}
-            editable={false}
-            tilesById={tiles}/>
-        )}
-        <div id={style.controls}>
-          <button onClick={() => requestAnimation()}>
-            📹
-          </button>
-          <button onClick={() => fetchMap(Math.max(0, map.index - 1))}>
-            🢦
-          </button>
-          <button onClick={() => fetchMap(map.index + 1)}>
-            🢧
-          </button>
-        </div>
-      </div>
       <div id={style.header}>
         <div className={style.top}>
           <h1>{formatMessage({id: 'parkings.header'})}</h1>
@@ -287,6 +266,27 @@ export default function Parkings() {
       <h4 id={style['map-name']}>
         {map?.name != undefined ? map.name[locale] : ''}
       </h4>
+      <div id={style['game-container']}>
+        <div id={style.cv} ref={cvRef}>
+          CV
+        </div>
+        {!(tiles && map) ? '' : (
+          <ParkingGrid map={map}
+            editable={false}
+            tilesById={tiles}/>
+        )}
+        <div id={style.controls}>
+          <button onClick={() => requestAnimation()}>
+            📹
+          </button>
+          <button onClick={() => fetchMap(Math.max(0, map.index - 1))}>
+            🢦
+          </button>
+          <button onClick={() => fetchMap(map.index + 1)}>
+            🢧
+          </button>
+        </div>
+      </div>
       <div id={style['editor-header']}>
         <h1>{formatMessage({id: 'parkings.editor_title'})}</h1>
         <p>{formatMessage({id: 'parkings.editor_desc'})}</p>
