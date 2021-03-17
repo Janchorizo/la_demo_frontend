@@ -6,7 +6,7 @@ import {
   ParkingGrid,
   MapEditor,
 } from 'components';
-import {api_endpoint} from 'env';
+import {apiEndpoint} from 'env';
 import style from './style.module.css';
 
 
@@ -18,7 +18,7 @@ function useTiles() {
   const [tiles, setTiles] = useState(null);
 
   useEffect(() => {
-    window.fetch(api_endpoint + 'tiles').then((res) => {
+    window.fetch(apiEndpoint + 'tiles').then((res) => {
       res.json().then((jsonRes) => {
         const tileArray = jsonRes.res;
         const tilesById = Object.fromEntries(
@@ -42,7 +42,7 @@ function useMap() {
   const [map, setMap] = useState(null);
 
   useEffect(() => {
-    window.fetch(api_endpoint + 'maps').then((res) => {
+    window.fetch(apiEndpoint + 'maps').then((res) => {
       res.json().then((jsonRes) => {
         const mapArray = jsonRes.res;
         setMap(mapArray[0]);
@@ -50,8 +50,12 @@ function useMap() {
     });
   }, []);
 
-  function fetchMap(index){
-    window.fetch(`${api_endpoint}maps?index=${index}/`).then((res) => {
+  /**
+   * Callback function to request a new map being fetched.
+   * @param {int} index Map index
+   */
+  function fetchMap(index) {
+    window.fetch(`${apiEndpoint}maps?index=${index}/`).then((res) => {
       res.json().then((jsonRes) => {
         const mapArray = jsonRes.res;
         if (mapArray?.[0] != undefined) {
@@ -65,7 +69,16 @@ function useMap() {
 }
 
 
-function getNextTile(currentRow, currentCol, map, tiles){
+/**
+ * Obtain the next row and column if the current position
+ * allows moving; else, null is returned.
+ * @param {int} currentRow Current row index
+ * @param {int} currentCol Current column index
+ * @param {object} map The map object with the layout
+ * @param {object} tiles A mapping between tile ids and specs
+ * @return {array} The next [row, col] coordinates
+ */
+function getNextTileCoords(currentRow, currentCol, map, tiles) {
   const orientation2rotation = {
     'north': 0,
     'east': 1,
@@ -79,28 +92,36 @@ function getNextTile(currentRow, currentCol, map, tiles){
   tileData.efec_entry = (tileData.entry + rotation) % 4;
   tileData.efec_exit = (tileData.exit + rotation) % 4;
 
-  if (current.efec_exit == NaN){
-    return null
+  if (current.efec_exit == NaN) {
+    return null;
   } else {
     let nextRow = currentRow;
     let nextCol = currentCol;
     switch (tileData.efec_exit) {
       case 0:
         nextRow = currentRow - 1;
-        if (nextRow < 0) {return null}
-      break;
+        if (nextRow < 0) {
+          return null;
+        }
+        break;
       case 1:
         nextCol = currentCol + 1;
-        if (nextCol > 4) {return null}
-      break;
+        if (nextCol > 4) {
+          return null;
+        }
+        break;
       case 2:
         nextRow = currentRow + 1;
-        if (nextRow > 4) {return null}
-      break;
+        if (nextRow > 4) {
+          return null;
+        }
+        break;
       case 3:
         nextCol = currentCol - 1;
-        if (nextCol < 0) {return null}
-      break;
+        if (nextCol < 0) {
+          return null;
+        }
+        break;
     }
 
     const next = map.layout[nextRow][nextCol];
@@ -108,8 +129,6 @@ function getNextTile(currentRow, currentCol, map, tiles){
     const nextEfecEntry = (tiles[next.id].entry + nextRotation) % 4;
     const oppositeToNextEfecEntry = (nextEfecEntry + 2) % 4;
 
-    console.log(tileData, {...tiles[next.id], ...next, nextEfecEntry}, oppositeToNextEfecEntry)
-    console.info(tileData.exit, oppositeToNextEfecEntry)
     if (tileData.efec_exit == oppositeToNextEfecEntry) {
       return [nextRow, nextCol];
     }
@@ -117,66 +136,90 @@ function getNextTile(currentRow, currentCol, map, tiles){
 }
 
 
-function animate(ref, map, tiles, setAnimating, locale){
+/**
+ * Setup the cv in the initial tile and recursively run the animation
+ * until no next coordinates are returnd getNextTileCoords by
+ * @param {object} ref React ref object for the cv HTMLnode
+ * @param {object} map Map object with the layout
+ * @param {object} tiles Mapping between tile ids and specs
+ * @param {function} setAnimating Callback to set finnished the animation
+ * @param {string} locale Current locale
+ */
+function animate(ref, map, tiles, setAnimating, locale) {
   // 1. locate the start cell; if more than
   // one abort
   let [row, col] = [null, null];
-  for (let rowIdx=0; rowIdx<5; rowIdx++){
-    for (let colIdx=0; colIdx<5; colIdx++){
-      if (map.layout[rowIdx][colIdx].id == 'start'){
-        if (row == null){
-          [row, col] = [rowIdx, colIdx]
+  for (let rowIdx=0; rowIdx<5; rowIdx++) {
+    for (let colIdx=0; colIdx<5; colIdx++) {
+      if (map.layout[rowIdx][colIdx].id == 'start') {
+        if (row == null) {
+          [row, col] = [rowIdx, colIdx];
         } else {
-          const err = (locale == 'es'
-            ? 'No se puede animar un mapa con varias salidas.'
-            : 'A map with multiple exits can\'t be animated.')
+          const err = (locale == 'es' ?
+            'No se puede animar un mapa con varias salidas.' :
+            'A map with multiple exits can\'t be animated.');
           alert(err);
           setAnimating(false);
-          return
+          return;
         }
       }
     }
   }
 
-  if (row == null){
-    const err = (locale == 'es'
-      ? 'No se puede animar un mapa sin casilla de salida.'
-      : 'A map without a start cell can\'t be animated.')
+  if (row == null) {
+    const err = (locale == 'es' ?
+      'No se puede animar un mapa sin casilla de salida.' :
+      'A map without a start cell can\'t be animated.');
     alert(err);
     setAnimating(false);
-    return
+    return;
   }
 
-  // place the CV on the start cell and show
-  
-  
+  // place the CV on the start cell and show and recursively
+  // move while there is a possible next tile
+  /**
+   * Recursive function to handle the periodic animation of
+   * the cv. getNextTileCoords returning null is the stop
+   * condition.
+   * @param {int} row current row index
+   * @param {int} col current col index
+   */
+  function move(row, col) {
+    const top = row * 128 + 32;
+    const left = col * 128 + 32;
+    ref.current.style.setProperty('top', top + 'px');
+    ref.current.style.setProperty('left', left + 'px');
 
-  function move(row, col){
-    let top = row * 128 + 32;
-    let left = col * 128 + 32;
-    ref.current.style.setProperty('top', top + 'px')
-    ref.current.style.setProperty('left', left + 'px')
-    
-    let x = getNextTile(row, col, map, tiles);
-    console.log(x)
+    const x = getNextTileCoords(row, col, map, tiles);
     if (x != undefined && x != null) {
-      setTimeout(() => move(x[0], x[1]), 1000)
+      setTimeout(() => move(x[0], x[1]), 1000);
     }
   }
-  move(row, col)
+  move(row, col);
 
-  // while there is an exit and the next cell
-  // has an entry there, move it
-
-  // after 5 seconds, hide the cv
-  setTimeout(() => {setAnimating(false);}, 5000)
+  setTimeout(() => {
+    setAnimating(false);
+  }, 5000);
 }
 
 
-function useAnimation(ref, map, tiles, locale){
+/**
+ * React effect to handle the cv animation. It returns a callback
+ * to request a new animation
+ * @param {object} ref React ref object for the cv HTMLnode
+ * @param {object} map Map object with the layout
+ * @param {object} tiles Mapping between tile ids and specs
+ * @param {string} locale Current locale
+ * @return {function} Callback to request a new animation
+ */
+function useAnimation(ref, map, tiles, locale) {
   const [animating, setAnimating] = useState(false);
 
-  function requestStartAnimating(){
+  /**
+   * The callback for requesting a new animation. It won't
+   * be started if there is one already going on.
+   */
+  function requestStartAnimating() {
     if (animating === false) {
       setAnimating(true);
       animate(ref, map, tiles, setAnimating, locale);

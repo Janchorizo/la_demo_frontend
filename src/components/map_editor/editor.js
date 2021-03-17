@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {
   ParkingGrid,
 } from 'components';
-import {api_endpoint} from 'env';
+import {apiEndpoint} from 'env';
 import style from './style.module.css';
 
 
@@ -34,22 +34,22 @@ function useMap() {
  * @param {object} map The map to be saved
  */
 function sendMap(map) {
-  fetch(api_endpoint + 'maps', {
+  fetch(apiEndpoint + 'maps', {
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json'
+      'Content-Type': 'application/json',
     },
-    body: JSON.stringify(map)
+    body: JSON.stringify(map),
   }).then((res) => {
     if (res.ok === true) {
-      res.json().then(data => {
-        console.log(data)
+      res.json().then((data) => {
+        console.log(data);
         if (data.res.ok == true) {
           alert('Mapa subido :)');
         } else {
           alert('Error al subir el mapa : ' + data.res.reason);
         }
-      })
+      });
     } else {
       alert('Error al subir el mapa');
     }
