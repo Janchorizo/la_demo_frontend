@@ -32,6 +32,7 @@ import 'common/style/theme.css';
  * @return {React.Component}
  */
 export default function App() {
+  console.info('Rendering app ...')
   return (
     <Container>
       <GithubBanner url='https://github.com/Janchorizo/la_demo_frontend'/>
